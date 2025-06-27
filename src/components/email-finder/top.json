@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_email_finder_tops",
+  "info": {
+    "displayName": "top"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Trusted_by_companies_and_agencies": {
+      "type": "text"
+    },
+    "Start_free": {
+      "type": "string"
+    },
+    "See_pricing": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -14,5 +14,44 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "get_started": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "email-finder.get-started",
+      "repeatable": false
+    },
+    "top": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "email-finder.top",
+      "repeatable": false
+    },
+    "grid_email_finder": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "email-finder.grid-email-finder",
+      "repeatable": false
+    }
+  }
 }

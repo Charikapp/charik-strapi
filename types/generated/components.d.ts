@@ -151,6 +151,55 @@ export interface ContactUsTop extends Struct.ComponentSchema {
   };
 }
 
+export interface EmailFinderGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_email_finder_get_starteds';
+  info: {
+    displayName: 'get_started';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface EmailFinderGridEmailFinder extends Struct.ComponentSchema {
+  collectionName: 'components_email_finder_grid_email_finders';
+  info: {
+    displayName: 'grid_email_finder';
+  };
+  attributes: {
+    Accuracy: Schema.Attribute.String;
+    card_1_description: Schema.Attribute.Text;
+    card_1_title: Schema.Attribute.String;
+    card_2_description: Schema.Attribute.Text;
+    card_2_title: Schema.Attribute.String;
+    card_3_description: Schema.Attribute.Text;
+    card_3_title: Schema.Attribute.String;
+    card_4_description: Schema.Attribute.Text;
+    card_4_title: Schema.Attribute.String;
+    card_5_description: Schema.Attribute.Text;
+    card_5_title: Schema.Attribute.String;
+    card_6_description: Schema.Attribute.Text;
+    card_6_title: Schema.Attribute.String;
+    Trust: Schema.Attribute.String;
+  };
+}
+
+export interface EmailFinderTop extends Struct.ComponentSchema {
+  collectionName: 'components_email_finder_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    See_pricing: Schema.Attribute.String;
+    Start_free: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    Trusted_by_companies_and_agencies: Schema.Attribute.Text;
+  };
+}
+
 export interface HomeAdvantages extends Struct.ComponentSchema {
   collectionName: 'components_home_advantages';
   info: {
@@ -627,6 +676,9 @@ declare module '@strapi/strapi' {
       'contact-us.location-contact-us-items': ContactUsLocationContactUsItems;
       'contact-us.service': ContactUsService;
       'contact-us.top': ContactUsTop;
+      'email-finder.get-started': EmailFinderGetStarted;
+      'email-finder.grid-email-finder': EmailFinderGridEmailFinder;
+      'email-finder.top': EmailFinderTop;
       'home.advantages': HomeAdvantages;
       'home.features': HomeFeatures;
       'home.get-started': HomeGetStarted;
