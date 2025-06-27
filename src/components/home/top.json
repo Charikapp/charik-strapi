@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_tops",
+  "info": {
+    "displayName": "top"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Start_free": {
+      "type": "string"
+    },
+    "See_pricing": {
+      "type": "string"
+    },
+    "Trusted_by_companies_and_agencies": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

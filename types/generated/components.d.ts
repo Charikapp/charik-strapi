@@ -75,6 +75,165 @@ export interface ContactUsTop extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeAdvantages extends Struct.ComponentSchema {
+  collectionName: 'components_home_advantages';
+  info: {
+    displayName: 'advantages';
+  };
+  attributes: {
+    Advantages: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface HomeFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_home_features';
+  info: {
+    displayName: 'features';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    Features: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_home_get_starteds';
+  info: {
+    displayName: 'get_started';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeHighlights extends Struct.ComponentSchema {
+  collectionName: 'components_home_highlights';
+  info: {
+    displayName: 'highlights';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    Highlights: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface HomeHowItWorks extends Struct.ComponentSchema {
+  collectionName: 'components_home_how_it_works';
+  info: {
+    displayName: 'how_it_works';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    How_it_works: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface HomeSponsors extends Struct.ComponentSchema {
+  collectionName: 'components_home_sponsors';
+  info: {
+    displayName: 'sponsors';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    our_sponsors: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeSwiperAdvantages extends Struct.ComponentSchema {
+  collectionName: 'components_home_swiper_advantages';
+  info: {
+    displayName: 'swiper_advantages';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeSwiperFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_home_swiper_features';
+  info: {
+    displayName: 'swiper_features';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeSwiperHighlights extends Struct.ComponentSchema {
+  collectionName: 'components_home_swiper_highlights';
+  info: {
+    displayName: 'swiper_highlights';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeSwiperHowItWorks extends Struct.ComponentSchema {
+  collectionName: 'components_home_swiper_how_it_works';
+  info: {
+    displayName: 'swiper_how_it_works';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeTestimonials extends Struct.ComponentSchema {
+  collectionName: 'components_home_testimonials';
+  info: {
+    displayName: 'testimonials';
+  };
+  attributes: {
+    countries_served: Schema.Attribute.Text;
+    fresh_company_records_available: Schema.Attribute.Text;
+    hours_freed_up: Schema.Attribute.Text;
+    Testimonials: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeTools extends Struct.ComponentSchema {
+  collectionName: 'components_home_tools';
+  info: {
+    displayName: 'tools';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    Flexible_credit_system: Schema.Attribute.String;
+    Native_HubSpot_integration: Schema.Attribute.String;
+    No_user_limits: Schema.Attribute.String;
+    On_demand_Custom_Agents: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeTop extends Struct.ComponentSchema {
+  collectionName: 'components_home_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    See_pricing: Schema.Attribute.String;
+    Start_free: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+    Trusted_by_companies_and_agencies: Schema.Attribute.Text;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
@@ -386,6 +545,19 @@ declare module '@strapi/strapi' {
       'contact-us.location-contact-us-items': ContactUsLocationContactUsItems;
       'contact-us.service': ContactUsService;
       'contact-us.top': ContactUsTop;
+      'home.advantages': HomeAdvantages;
+      'home.features': HomeFeatures;
+      'home.get-started': HomeGetStarted;
+      'home.highlights': HomeHighlights;
+      'home.how-it-works': HomeHowItWorks;
+      'home.sponsors': HomeSponsors;
+      'home.swiper-advantages': HomeSwiperAdvantages;
+      'home.swiper-features': HomeSwiperFeatures;
+      'home.swiper-highlights': HomeSwiperHighlights;
+      'home.swiper-how-it-works': HomeSwiperHowItWorks;
+      'home.testimonials': HomeTestimonials;
+      'home.tools': HomeTools;
+      'home.top': HomeTop;
       'layout.footer': LayoutFooter;
       'layout.navbar': LayoutNavbar;
       'privacy-policy.about': PrivacyPolicyAbout;

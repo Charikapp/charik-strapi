@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_testimonials",
+  "info": {
+    "displayName": "testimonials"
+  },
+  "options": {},
+  "attributes": {
+    "Testimonials": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "hours_freed_up": {
+      "type": "text"
+    },
+    "fresh_company_records_available": {
+      "type": "text"
+    },
+    "countries_served": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

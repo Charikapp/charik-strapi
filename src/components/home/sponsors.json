@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_sponsors",
+  "info": {
+    "displayName": "sponsors"
+  },
+  "options": {},
+  "attributes": {
+    "our_sponsors": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

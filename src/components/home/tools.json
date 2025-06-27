@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_tools",
+  "info": {
+    "displayName": "tools"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Native_HubSpot_integration": {
+      "type": "string"
+    },
+    "Flexible_credit_system": {
+      "type": "string"
+    },
+    "No_user_limits": {
+      "type": "string"
+    },
+    "On_demand_Custom_Agents": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

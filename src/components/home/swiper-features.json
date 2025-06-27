@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_swiper_features",
+  "info": {
+    "displayName": "swiper_features"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
