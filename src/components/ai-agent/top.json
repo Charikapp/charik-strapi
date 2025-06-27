@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_ai_agent_tops",
+  "info": {
+    "displayName": "top"
+  },
+  "options": {},
+  "attributes": {
+    "The_Smartest_Way_to_Generate_Leads": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Trusted_by_companies_and_agencies": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

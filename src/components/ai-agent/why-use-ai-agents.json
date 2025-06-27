@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_ai_agent_why_use_ai_agents",
+  "info": {
+    "displayName": "why_use_AI_agents"
+  },
+  "options": {},
+  "attributes": {
+    "Why_Use_AI_Agents": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "swiper1": {
+      "type": "text"
+    },
+    "swiper2": {
+      "type": "text"
+    },
+    "swiper3": {
+      "type": "text"
+    },
+    "swiper4": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

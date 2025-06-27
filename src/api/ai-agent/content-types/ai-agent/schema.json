@@ -14,5 +14,74 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "get_started": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.get-started",
+      "repeatable": false
+    },
+    "top": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.top",
+      "repeatable": false
+    },
+    "what_AI_agent": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.what-ai-agent",
+      "repeatable": false
+    },
+    "how_it_works": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.how-it-works",
+      "repeatable": false
+    },
+    "swiper_how_it_works": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.swiper-how-it-works",
+      "repeatable": true
+    },
+    "why_use_AI_agents": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.why-use-ai-agents",
+      "repeatable": false
+    }
+  }
 }

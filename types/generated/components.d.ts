@@ -1,5 +1,81 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AiAgentGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_get_starteds';
+  info: {
+    displayName: 'get_started';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AiAgentHowItWorks extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_how_it_works';
+  info: {
+    displayName: 'how_it_works';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    How_it_works: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface AiAgentSwiperHowItWorks extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_swiper_how_it_works';
+  info: {
+    displayName: 'swiper_how_it_works';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AiAgentTop extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    The_Smartest_Way_to_Generate_Leads: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    Trusted_by_companies_and_agencies: Schema.Attribute.Text;
+  };
+}
+
+export interface AiAgentWhatAiAgent extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_what_ai_agents';
+  info: {
+    displayName: 'what_AI_agent';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    swiper1: Schema.Attribute.Text;
+    swiper2: Schema.Attribute.Text;
+    swiper3: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AiAgentWhyUseAiAgents extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_why_use_ai_agents';
+  info: {
+    displayName: 'why_use_AI_agents';
+  };
+  attributes: {
+    swiper1: Schema.Attribute.Text;
+    swiper2: Schema.Attribute.Text;
+    swiper3: Schema.Attribute.Text;
+    swiper4: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    Why_Use_AI_Agents: Schema.Attribute.String;
+  };
+}
+
 export interface ContactUsFormContactUs extends Struct.ComponentSchema {
   collectionName: 'components_contact_us_form_contact_uses';
   info: {
@@ -539,6 +615,12 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'ai-agent.get-started': AiAgentGetStarted;
+      'ai-agent.how-it-works': AiAgentHowItWorks;
+      'ai-agent.swiper-how-it-works': AiAgentSwiperHowItWorks;
+      'ai-agent.top': AiAgentTop;
+      'ai-agent.what-ai-agent': AiAgentWhatAiAgent;
+      'ai-agent.why-use-ai-agents': AiAgentWhyUseAiAgents;
       'contact-us.form-contact-us': ContactUsFormContactUs;
       'contact-us.get-started': ContactUsGetStarted;
       'contact-us.location-contact-us': ContactUsLocationContactUs;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ai_agent_get_starteds",
+  "info": {
+    "displayName": "get_started"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
