@@ -200,6 +200,17 @@ export interface EmailFinderTop extends Struct.ComponentSchema {
   };
 }
 
+export interface FaqFaqItems extends Struct.ComponentSchema {
+  collectionName: 'components_faq_faq_items';
+  info: {
+    displayName: 'faq_items';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.Text;
+  };
+}
+
 export interface HomeAdvantages extends Struct.ComponentSchema {
   collectionName: 'components_home_advantages';
   info: {
@@ -679,6 +690,7 @@ declare module '@strapi/strapi' {
       'email-finder.get-started': EmailFinderGetStarted;
       'email-finder.grid-email-finder': EmailFinderGridEmailFinder;
       'email-finder.top': EmailFinderTop;
+      'faq.faq-items': FaqFaqItems;
       'home.advantages': HomeAdvantages;
       'home.features': HomeFeatures;
       'home.get-started': HomeGetStarted;
