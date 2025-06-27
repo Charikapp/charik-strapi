@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_privacy_policy_cookies_trackings",
+  "info": {
+    "displayName": "cookies_tracking"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Ensure_proper_functioning_of_our_website": {
+      "type": "text"
+    },
+    "Analyze_audience_and_improve_user_experience": {
+      "type": "string"
+    },
+    "Offer_relevant_content": {
+      "type": "string"
+    },
+    "text_2": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_contact_us_form_contact_uses",
+  "info": {
+    "displayName": "form_contact_us"
+  },
+  "options": {},
+  "attributes": {
+    "Contact_us": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "Type_your_message": {
+      "type": "string"
+    },
+    "Submit": {
+      "type": "string"
+    },
+    "Firstname": {
+      "type": "string"
+    },
+    "Lastname": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

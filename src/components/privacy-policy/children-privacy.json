@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_privacy_policy_children_privacies",
+  "info": {
+    "displayName": "children_privacy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

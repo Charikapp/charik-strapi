@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_finders",
+  "info": {
+    "singularName": "email-finder",
+    "pluralName": "email-finders",
+    "displayName": "Email Finder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

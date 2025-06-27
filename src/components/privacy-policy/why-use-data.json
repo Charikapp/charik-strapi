@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_privacy_policy_why_use_data",
+  "info": {
+    "displayName": "why_use_data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Purpose": {
+      "type": "string"
+    },
+    "Legal_Basis": {
+      "type": "string"
+    },
+    "Provide_and_operate_our_services": {
+      "type": "string"
+    },
+    "Provide_and_operate_our_services_legal": {
+      "type": "string"
+    },
+    "Customer_support_and_communication": {
+      "type": "string"
+    },
+    "Customer_support_and_communication_legal": {
+      "type": "string"
+    },
+    "Improve_and_personalize_our_services": {
+      "type": "string"
+    },
+    "Improve_and_personalize_our_services_legal": {
+      "type": "string"
+    },
+    "Marketing_communications": {
+      "type": "string"
+    },
+    "Marketing_communications_legal": {
+      "type": "string"
+    },
+    "Comply_with_legal_obligations": {
+      "type": "string"
+    },
+    "Comply_with_legal_obligations_legal": {
+      "type": "string"
+    },
+    "Protect_our_rights_and_prevent_fraud": {
+      "type": "string"
+    },
+    "Protect_our_rights_and_prevent_fraud_legal": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

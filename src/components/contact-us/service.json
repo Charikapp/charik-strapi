@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contact_us_services",
+  "info": {
+    "displayName": "service"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,173 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policies",
+  "info": {
+    "singularName": "privacy-policy",
+    "pluralName": "privacy-policies",
+    "displayName": "Privacy Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Privacy_Policy": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Charik_Privacy_Policy": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Last_updated": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "About": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.about",
+      "repeatable": false
+    },
+    "who_is_responsible": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.who-is-responsible",
+      "repeatable": false
+    },
+    "what_we_collect": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.what-we-collect",
+      "repeatable": false
+    },
+    "why_use_data": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.why-use-data",
+      "repeatable": false
+    },
+    "who_share_data": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.who-share-data",
+      "repeatable": false
+    },
+    "international_data_transfers": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.international-data-transfers",
+      "repeatable": false
+    },
+    "how_long_keep_data": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.how-long-keep-data",
+      "repeatable": false
+    },
+    "cookies_tracking": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.cookies-tracking",
+      "repeatable": false
+    },
+    "your_rights": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.your-rights",
+      "repeatable": false
+    },
+    "security_data": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.security-data",
+      "repeatable": false
+    },
+    "children_privacy": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.children-privacy",
+      "repeatable": false
+    },
+    "changes_privacy_policy": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.changes-privacy-policy",
+      "repeatable": false
+    },
+    "contact_us": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "privacy-policy.contact-us",
+      "repeatable": false
+    }
+  }
+}

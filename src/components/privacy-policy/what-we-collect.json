@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_privacy_policy_what_we_collects",
+  "info": {
+    "displayName": "what_we_collect"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Data_Category": {
+      "type": "string"
+    },
+    "Examples": {
+      "type": "string"
+    },
+    "Account_Information": {
+      "type": "string"
+    },
+    "Account_Information_example": {
+      "type": "text"
+    },
+    "CRM_Data": {
+      "type": "string"
+    },
+    "CRM_Data_example": {
+      "type": "text"
+    },
+    "Billing_Information": {
+      "type": "string"
+    },
+    "Billing_Information_example": {
+      "type": "text"
+    },
+    "Usage_Data": {
+      "type": "string"
+    },
+    "Usage_Data_example": {
+      "type": "text"
+    },
+    "Website_Data": {
+      "type": "string"
+    },
+    "Website_Data_example": {
+      "type": "text"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_privacy_policy_who_share_data",
+  "info": {
+    "displayName": "who_share_data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "Service_providers": {
+      "type": "string"
+    },
+    "CRM_integrations": {
+      "type": "string"
+    },
+    "Legal_authorities": {
+      "type": "string"
+    },
+    "text_2": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

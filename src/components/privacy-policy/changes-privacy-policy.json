@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_privacy_policy_changes_privacy_policies",
+  "info": {
+    "displayName": "changes_privacy_policy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Last_updated": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

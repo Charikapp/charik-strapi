@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_privacy_policy_international_data_transfers",
+  "info": {
+    "displayName": "international_data_transfers"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "Standard_Contractual_Clauses": {
+      "type": "string"
+    },
+    "Data_Privacy_Framework": {
+      "type": "string"
+    },
+    "Equivalent_mechanisms_recognized_by_the_European_Commission": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

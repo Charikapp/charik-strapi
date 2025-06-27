@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_agents",
+  "info": {
+    "singularName": "ai-agent",
+    "pluralName": "ai-agents",
+    "displayName": "AI Agent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

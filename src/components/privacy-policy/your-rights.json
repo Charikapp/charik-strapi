@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_privacy_policy_your_rights",
+  "info": {
+    "displayName": "your_rights"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Access_your_data": {
+      "type": "string"
+    },
+    "Request_correction_of_inaccurate_data": {
+      "type": "text"
+    },
+    "Request_deletion_of_your_data": {
+      "type": "text"
+    },
+    "Restrict_or_object_to_data_processing": {
+      "type": "text"
+    },
+    "Request_data_portability": {
+      "type": "text"
+    },
+    "Withdraw_consent_at_any_time": {
+      "type": "text"
+    },
+    "text_2": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

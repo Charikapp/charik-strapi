@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_privacy_policy_how_long_keep_data",
+  "info": {
+    "displayName": "how_long_keep_data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Data_Type": {
+      "type": "string"
+    },
+    "Retention_Period": {
+      "type": "string"
+    },
+    "Customer_account_data": {
+      "type": "string"
+    },
+    "Customer_account_data_period": {
+      "type": "text"
+    },
+    "CRM_data": {
+      "type": "string"
+    },
+    "CRM_data_period": {
+      "type": "text"
+    },
+    "Marketing_data": {
+      "type": "string"
+    },
+    "Marketing_data_period": {
+      "type": "string"
+    },
+    "Cookies": {
+      "type": "string"
+    },
+    "Cookies_period": {
+      "type": "text"
+    },
+    "text_2": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_navbars",
+  "info": {
+    "displayName": "navbar"
+  },
+  "options": {},
+  "attributes": {
+    "AI_Agents": {
+      "type": "string"
+    },
+    "Pricing": {
+      "type": "string"
+    },
+    "Resources": {
+      "type": "string"
+    },
+    "Sign_in": {
+      "type": "string"
+    },
+    "Start_now": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

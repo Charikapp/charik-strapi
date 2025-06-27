@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_privacy_policy_who_is_responsibles",
+  "info": {
+    "displayName": "who_is_responsible"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_privacy_policy_security_data",
+  "info": {
+    "displayName": "security_data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

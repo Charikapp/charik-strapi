@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_privacy_policy_contact_uses",
+  "info": {
+    "displayName": "contact_us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Data_Protection_Officer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

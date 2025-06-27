@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_privacy_policy_abouts",
+  "info": {
+    "displayName": "About"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "part1": {
+      "type": "text"
+    },
+    "part2": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

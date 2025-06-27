@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_contact_us_location_contact_uses",
+  "info": {
+    "displayName": "location_contact_us"
+  },
+  "options": {},
+  "attributes": {
+    "Location": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
