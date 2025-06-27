@@ -76,6 +76,54 @@ export interface AiAgentWhyUseAiAgents extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogArticle extends Struct.ComponentSchema {
+  collectionName: 'components_blog_articles';
+  info: {
+    displayName: 'article';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    Keep_Reading: Schema.Attribute.String;
+    Ready_to_build: Schema.Attribute.String;
+    Share_this_article: Schema.Attribute.String;
+  };
+}
+
+export interface BlogGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_blog_get_starteds';
+  info: {
+    displayName: 'get_started';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogGrid extends Struct.ComponentSchema {
+  collectionName: 'components_blog_grids';
+  info: {
+    displayName: 'grid';
+  };
+  attributes: {
+    All_Topics: Schema.Attribute.String;
+    Load_more_stories: Schema.Attribute.String;
+    Search: Schema.Attribute.String;
+  };
+}
+
+export interface BlogTop extends Struct.ComponentSchema {
+  collectionName: 'components_blog_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ContactUsFormContactUs extends Struct.ComponentSchema {
   collectionName: 'components_contact_us_form_contact_uses';
   info: {
@@ -681,6 +729,10 @@ declare module '@strapi/strapi' {
       'ai-agent.top': AiAgentTop;
       'ai-agent.what-ai-agent': AiAgentWhatAiAgent;
       'ai-agent.why-use-ai-agents': AiAgentWhyUseAiAgents;
+      'blog.article': BlogArticle;
+      'blog.get-started': BlogGetStarted;
+      'blog.grid': BlogGrid;
+      'blog.top': BlogTop;
       'contact-us.form-contact-us': ContactUsFormContactUs;
       'contact-us.get-started': ContactUsGetStarted;
       'contact-us.location-contact-us': ContactUsLocationContactUs;

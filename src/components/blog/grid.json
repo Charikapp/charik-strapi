@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_grids",
+  "info": {
+    "displayName": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "All_Topics": {
+      "type": "string"
+    },
+    "Search": {
+      "type": "string"
+    },
+    "Load_more_stories": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
