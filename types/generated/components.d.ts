@@ -124,6 +124,70 @@ export interface BlogTop extends Struct.ComponentSchema {
   };
 }
 
+export interface ChromeExtensionGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_chrome_extension_get_starteds';
+  info: {
+    displayName: 'get_started';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface ChromeExtensionGridChromeExtension
+  extends Struct.ComponentSchema {
+  collectionName: 'components_chrome_extension_grid_chrome_extensions';
+  info: {
+    displayName: 'grid_chrome_extension';
+  };
+  attributes: {
+    card_1_description: Schema.Attribute.Text;
+    card_1_title: Schema.Attribute.String;
+    card_2_description: Schema.Attribute.Text;
+    card_2_title: Schema.Attribute.String;
+    card_3_description: Schema.Attribute.Text;
+    card_3_title: Schema.Attribute.String;
+    card_4_description: Schema.Attribute.Text;
+    card_4_title: Schema.Attribute.String;
+    Effortless_LinkedIn_Prospecting: Schema.Attribute.Text;
+    Email_Phone_Job_Title_Lists: Schema.Attribute.Text;
+    Endless_fresh_opportunities_available_to_you: Schema.Attribute.Text;
+    Selling_with_context: Schema.Attribute.Text;
+  };
+}
+
+export interface ChromeExtensionTools extends Struct.ComponentSchema {
+  collectionName: 'components_chrome_extension_tools';
+  info: {
+    displayName: 'tools';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    item_1_description: Schema.Attribute.Text;
+    item_1_title: Schema.Attribute.String;
+    item_2_description: Schema.Attribute.Text;
+    item_2_title: Schema.Attribute.String;
+    item_3_description: Schema.Attribute.Text;
+    item_3_title: Schema.Attribute.String;
+    item_4_description: Schema.Attribute.Text;
+    item_4_title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ChromeExtensionTop extends Struct.ComponentSchema {
+  collectionName: 'components_chrome_extension_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ContactUsFormContactUs extends Struct.ComponentSchema {
   collectionName: 'components_contact_us_form_contact_uses';
   info: {
@@ -733,6 +797,10 @@ declare module '@strapi/strapi' {
       'blog.get-started': BlogGetStarted;
       'blog.grid': BlogGrid;
       'blog.top': BlogTop;
+      'chrome-extension.get-started': ChromeExtensionGetStarted;
+      'chrome-extension.grid-chrome-extension': ChromeExtensionGridChromeExtension;
+      'chrome-extension.tools': ChromeExtensionTools;
+      'chrome-extension.top': ChromeExtensionTop;
       'contact-us.form-contact-us': ContactUsFormContactUs;
       'contact-us.get-started': ContactUsGetStarted;
       'contact-us.location-contact-us': ContactUsLocationContactUs;

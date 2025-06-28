@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_chrome_extension_tools",
+  "info": {
+    "displayName": "tools"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "item_1_title": {
+      "type": "string"
+    },
+    "item_1_description": {
+      "type": "text"
+    },
+    "item_2_title": {
+      "type": "string"
+    },
+    "item_2_description": {
+      "type": "text"
+    },
+    "item_3_title": {
+      "type": "string"
+    },
+    "item_3_description": {
+      "type": "text"
+    },
+    "item_4_title": {
+      "type": "string"
+    },
+    "item_4_description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

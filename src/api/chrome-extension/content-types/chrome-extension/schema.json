@@ -14,5 +14,54 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "get_started": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "chrome-extension.get-started",
+      "repeatable": false
+    },
+    "top": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "chrome-extension.top",
+      "repeatable": false
+    },
+    "grid_chrome_extension": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "chrome-extension.grid-chrome-extension",
+      "repeatable": false
+    },
+    "tools": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "chrome-extension.tools",
+      "repeatable": false
+    }
+  }
 }

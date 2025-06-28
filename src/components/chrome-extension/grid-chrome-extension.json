@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_chrome_extension_grid_chrome_extensions",
+  "info": {
+    "displayName": "grid_chrome_extension"
+  },
+  "options": {},
+  "attributes": {
+    "Effortless_LinkedIn_Prospecting": {
+      "type": "text"
+    },
+    "Email_Phone_Job_Title_Lists": {
+      "type": "text"
+    },
+    "Endless_fresh_opportunities_available_to_you": {
+      "type": "text"
+    },
+    "Selling_with_context": {
+      "type": "text"
+    },
+    "card_1_title": {
+      "type": "string"
+    },
+    "card_1_description": {
+      "type": "text"
+    },
+    "card_2_title": {
+      "type": "string"
+    },
+    "card_2_description": {
+      "type": "text"
+    },
+    "card_3_title": {
+      "type": "string"
+    },
+    "card_3_description": {
+      "type": "text"
+    },
+    "card_4_title": {
+      "type": "string"
+    },
+    "card_4_description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
