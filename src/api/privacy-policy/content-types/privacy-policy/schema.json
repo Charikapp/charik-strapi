@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "Privacy_Policy": {
+    "privacy_policy": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -23,7 +23,7 @@
         }
       }
     },
-    "Charik_Privacy_Policy": {
+    "charik_privacy_policy": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -31,7 +31,7 @@
         }
       }
     },
-    "Last_updated": {
+    "last_updated": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -39,7 +39,7 @@
         }
       }
     },
-    "About": {
+    "about": {
       "type": "component",
       "pluginOptions": {
         "i18n": {

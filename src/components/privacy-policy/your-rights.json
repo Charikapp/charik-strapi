@@ -11,22 +11,22 @@
     "text": {
       "type": "text"
     },
-    "Access_your_data": {
+    "access_your_data": {
       "type": "string"
     },
-    "Request_correction_of_inaccurate_data": {
+    "request_correction_of_inaccurate_data": {
       "type": "text"
     },
-    "Request_deletion_of_your_data": {
+    "request_deletion_of_your_data": {
       "type": "text"
     },
-    "Restrict_or_object_to_data_processing": {
+    "restrict_or_object_to_data_processing": {
       "type": "text"
     },
-    "Request_data_portability": {
+    "request_data_portability": {
       "type": "text"
     },
-    "Withdraw_consent_at_any_time": {
+    "withdraw_consent_at_any_time": {
       "type": "text"
     },
     "text_2": {

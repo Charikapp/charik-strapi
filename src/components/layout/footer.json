@@ -5,46 +5,46 @@
   },
   "options": {},
   "attributes": {
-    "Rights": {
+    "rights": {
       "type": "string"
     },
-    "Contact": {
+    "contact": {
       "type": "string"
     },
-    "Product": {
+    "product": {
       "type": "string"
     },
-    "Pricing": {
+    "pricing": {
       "type": "string"
     },
-    "Resources": {
+    "resources": {
       "type": "string"
     },
-    "Guide": {
+    "guide": {
       "type": "string"
     },
-    "Blog": {
+    "blog": {
       "type": "string"
     },
-    "Newsletter": {
+    "newsletter": {
       "type": "string"
     },
-    "Changelog": {
+    "changelog": {
       "type": "string"
     },
-    "Company": {
+    "company": {
       "type": "string"
     },
-    "About_us": {
+    "about_us": {
       "type": "string"
     },
-    "Privacy_Policy": {
+    "privacy_policy": {
       "type": "string"
     },
-    "Terms_of_Service": {
+    "terms_of_service": {
       "type": "string"
     },
-    "Become_a_Partner": {
+    "become_a_partner": {
       "type": "string"
     }
   },

@@ -11,7 +11,7 @@
     "description": {
       "type": "text"
     },
-    "buttonText": {
+    "button_text": {
       "type": "string"
     }
   },

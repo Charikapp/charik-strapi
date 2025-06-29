@@ -11,13 +11,13 @@
     "text": {
       "type": "text"
     },
-    "Ensure_proper_functioning_of_our_website": {
+    "ensure_proper_functioning_of_our_website": {
       "type": "text"
     },
-    "Analyze_audience_and_improve_user_experience": {
+    "analyze_audience_and_improve_user_experience": {
       "type": "string"
     },
-    "Offer_relevant_content": {
+    "offer_relevant_content": {
       "type": "string"
     },
     "text_2": {

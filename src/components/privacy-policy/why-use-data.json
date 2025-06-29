@@ -8,46 +8,46 @@
     "title": {
       "type": "string"
     },
-    "Purpose": {
+    "purpose": {
       "type": "string"
     },
-    "Legal_Basis": {
+    "legal_basis": {
       "type": "string"
     },
-    "Provide_and_operate_our_services": {
+    "provide_and_operate_our_services": {
       "type": "string"
     },
-    "Provide_and_operate_our_services_legal": {
+    "provide_and_operate_our_services_legal": {
       "type": "string"
     },
-    "Customer_support_and_communication": {
+    "customer_support_and_communication": {
       "type": "string"
     },
-    "Customer_support_and_communication_legal": {
+    "customer_support_and_communication_legal": {
       "type": "string"
     },
-    "Improve_and_personalize_our_services": {
+    "improve_and_personalize_our_services": {
       "type": "string"
     },
-    "Improve_and_personalize_our_services_legal": {
+    "improve_and_personalize_our_services_legal": {
       "type": "string"
     },
-    "Marketing_communications": {
+    "marketing_communications": {
       "type": "string"
     },
-    "Marketing_communications_legal": {
+    "marketing_communications_legal": {
       "type": "string"
     },
-    "Comply_with_legal_obligations": {
+    "comply_with_legal_obligations": {
       "type": "string"
     },
-    "Comply_with_legal_obligations_legal": {
+    "comply_with_legal_obligations_legal": {
       "type": "string"
     },
-    "Protect_our_rights_and_prevent_fraud": {
+    "protect_our_rights_and_prevent_fraud": {
       "type": "string"
     },
-    "Protect_our_rights_and_prevent_fraud_legal": {
+    "protect_our_rights_and_prevent_fraud_legal": {
       "type": "string"
     },
     "text": {

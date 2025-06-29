@@ -5,13 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "All_Topics": {
+    "all_topics": {
       "type": "string"
     },
-    "Search": {
+    "search": {
       "type": "string"
     },
-    "Load_more_stories": {
+    "load_more_stories": {
       "type": "string"
     }
   },

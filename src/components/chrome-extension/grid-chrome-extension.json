@@ -5,16 +5,16 @@
   },
   "options": {},
   "attributes": {
-    "Effortless_LinkedIn_Prospecting": {
+    "feature1": {
       "type": "text"
     },
-    "Email_Phone_Job_Title_Lists": {
+    "feature2": {
       "type": "text"
     },
-    "Endless_fresh_opportunities_available_to_you": {
+    "feature3": {
       "type": "text"
     },
-    "Selling_with_context": {
+    "feature4": {
       "type": "text"
     },
     "card_1_title": {

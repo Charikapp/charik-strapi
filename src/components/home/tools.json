@@ -11,16 +11,16 @@
     "description": {
       "type": "text"
     },
-    "Native_HubSpot_integration": {
+    "hubspot_integration": {
       "type": "string"
     },
-    "Flexible_credit_system": {
+    "credit_system": {
       "type": "string"
     },
-    "No_user_limits": {
+    "user_limits": {
       "type": "string"
     },
-    "On_demand_Custom_Agents": {
+    "custom_agents": {
       "type": "string"
     }
   },

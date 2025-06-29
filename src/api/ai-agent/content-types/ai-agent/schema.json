@@ -43,7 +43,7 @@
       "component": "ai-agent.top",
       "repeatable": false
     },
-    "what_AI_agent": {
+    "what_ai_agent": {
       "type": "component",
       "pluginOptions": {
         "i18n": {

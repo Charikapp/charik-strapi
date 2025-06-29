@@ -5,28 +5,28 @@
   },
   "options": {},
   "attributes": {
-    "Contact_us": {
+    "contact_us_tag": {
       "type": "string"
     },
     "title": {
       "type": "string"
     },
-    "Type_your_message": {
+    "type_your_message": {
       "type": "string"
     },
-    "Submit": {
+    "submit": {
       "type": "string"
     },
-    "Firstname": {
+    "firstname": {
       "type": "string"
     },
-    "Lastname": {
+    "lastname": {
       "type": "string"
     },
-    "Email": {
+    "email": {
       "type": "string"
     },
-    "Message": {
+    "message": {
       "type": "string"
     }
   },

@@ -11,13 +11,13 @@
     "description": {
       "type": "text"
     },
-    "Trusted_by_companies_and_agencies": {
+    "trusted_by_companies_and_agencies": {
       "type": "text"
     },
-    "Start_free": {
+    "start_free": {
       "type": "string"
     },
-    "See_pricing": {
+    "pricing_button": {
       "type": "string"
     }
   },

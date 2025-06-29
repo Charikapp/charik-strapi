@@ -434,7 +434,7 @@ export interface ApiAiAgentAiAgent extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    what_AI_agent: Schema.Attribute.Component<'ai-agent.what-ai-agent', false> &
+    what_ai_agent: Schema.Attribute.Component<'ai-agent.what-ai-agent', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -844,13 +844,13 @@ export interface ApiFaqFaq extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    FAQ: Schema.Attribute.String &
+    faq_items: Schema.Attribute.Component<'faq.faq-items', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    faq_items: Schema.Attribute.Component<'faq.faq-items', true> &
+    faq_tag: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1017,7 +1017,7 @@ export interface ApiLayoutLayout extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    Get_started_today: Schema.Attribute.String &
+    get_started_today: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1139,7 +1139,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    About: Schema.Attribute.Component<'privacy-policy.about', false> &
+    about: Schema.Attribute.Component<'privacy-policy.about', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1154,7 +1154,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    Charik_Privacy_Policy: Schema.Attribute.String &
+    charik_privacy_policy: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1205,7 +1205,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    Last_updated: Schema.Attribute.String &
+    last_updated: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1216,7 +1216,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::privacy-policy.privacy-policy'
     >;
-    Privacy_Policy: Schema.Attribute.String &
+    privacy_policy: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

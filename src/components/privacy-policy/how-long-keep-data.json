@@ -11,34 +11,34 @@
     "text": {
       "type": "text"
     },
-    "Data_Type": {
+    "data_type": {
       "type": "string"
     },
-    "Retention_Period": {
+    "retention_period": {
       "type": "string"
     },
-    "Customer_account_data": {
+    "customer_account_data": {
       "type": "string"
     },
-    "Customer_account_data_period": {
+    "customer_account_data_period": {
       "type": "text"
     },
-    "CRM_data": {
+    "crm_data": {
       "type": "string"
     },
-    "CRM_data_period": {
+    "crm_data_period": {
       "type": "text"
     },
-    "Marketing_data": {
+    "marketing_data": {
       "type": "string"
     },
-    "Marketing_data_period": {
+    "marketing_data_period": {
       "type": "string"
     },
-    "Cookies": {
+    "cookies": {
       "type": "string"
     },
-    "Cookies_period": {
+    "cookies_period": {
       "type": "text"
     },
     "text_2": {

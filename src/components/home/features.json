@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "Features": {
+    "features_tag": {
       "type": "string"
     },
     "title": {

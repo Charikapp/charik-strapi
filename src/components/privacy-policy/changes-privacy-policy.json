@@ -11,7 +11,7 @@
     "text": {
       "type": "text"
     },
-    "Last_updated": {
+    "last_updated": {
       "type": "string"
     }
   },

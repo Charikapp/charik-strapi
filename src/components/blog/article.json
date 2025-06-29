@@ -5,16 +5,16 @@
   },
   "options": {},
   "attributes": {
-    "Ready_to_build": {
+    "ready_to_build": {
       "type": "string"
     },
-    "buttonText": {
+    "button_text": {
       "type": "string"
     },
-    "Share_this_article": {
+    "share_text": {
       "type": "string"
     },
-    "Keep_Reading": {
+    "keep_reading": {
       "type": "string"
     }
   },

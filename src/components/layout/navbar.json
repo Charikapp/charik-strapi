@@ -5,19 +5,19 @@
   },
   "options": {},
   "attributes": {
-    "AI_Agents": {
+    "ai_agents": {
       "type": "string"
     },
-    "Pricing": {
+    "pricing": {
       "type": "string"
     },
-    "Resources": {
+    "resources": {
       "type": "string"
     },
-    "Sign_in": {
+    "sign_in": {
       "type": "string"
     },
-    "Start_now": {
+    "start_now": {
       "type": "string"
     }
   },

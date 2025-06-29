@@ -11,13 +11,13 @@
     "text": {
       "type": "string"
     },
-    "Service_providers": {
+    "service_providers": {
       "type": "string"
     },
-    "CRM_integrations": {
+    "crm_integrations": {
       "type": "string"
     },
-    "Legal_authorities": {
+    "legal_authorities": {
       "type": "string"
     },
     "text_2": {

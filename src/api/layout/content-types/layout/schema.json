@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "Get_started_today": {
+    "get_started_today": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

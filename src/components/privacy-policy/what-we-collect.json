@@ -8,40 +8,40 @@
     "title": {
       "type": "string"
     },
-    "Data_Category": {
+    "data_category": {
       "type": "string"
     },
-    "Examples": {
+    "examples": {
       "type": "string"
     },
-    "Account_Information": {
+    "account_information": {
       "type": "string"
     },
-    "Account_Information_example": {
+    "account_information_example": {
       "type": "text"
     },
-    "CRM_Data": {
+    "crm_data": {
       "type": "string"
     },
-    "CRM_Data_example": {
+    "crm_data_example": {
       "type": "text"
     },
-    "Billing_Information": {
+    "billing_information": {
       "type": "string"
     },
-    "Billing_Information_example": {
+    "billing_information_example": {
       "type": "text"
     },
-    "Usage_Data": {
+    "usage_data": {
       "type": "string"
     },
-    "Usage_Data_example": {
+    "usage_data_example": {
       "type": "text"
     },
-    "Website_Data": {
+    "website_data": {
       "type": "string"
     },
-    "Website_Data_example": {
+    "website_data_example": {
       "type": "text"
     },
     "text": {

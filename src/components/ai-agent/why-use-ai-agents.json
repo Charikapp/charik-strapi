@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "Why_Use_AI_Agents": {
+    "why_use_ai_agents": {
       "type": "string"
     },
     "title": {

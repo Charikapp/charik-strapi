@@ -6,7 +6,7 @@ export interface AiAgentGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -18,7 +18,7 @@ export interface AiAgentHowItWorks extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    How_it_works: Schema.Attribute.String;
+    how_it_works: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -41,9 +41,9 @@ export interface AiAgentTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    The_Smartest_Way_to_Generate_Leads: Schema.Attribute.String;
+    slogon: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    Trusted_by_companies_and_agencies: Schema.Attribute.Text;
+    trusted_by_companies_and_agencies: Schema.Attribute.Text;
   };
 }
 
@@ -72,7 +72,7 @@ export interface AiAgentWhyUseAiAgents extends Struct.ComponentSchema {
     swiper3: Schema.Attribute.Text;
     swiper4: Schema.Attribute.Text;
     title: Schema.Attribute.String;
-    Why_Use_AI_Agents: Schema.Attribute.String;
+    why_use_ai_agents: Schema.Attribute.String;
   };
 }
 
@@ -82,10 +82,10 @@ export interface BlogArticle extends Struct.ComponentSchema {
     displayName: 'article';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
-    Keep_Reading: Schema.Attribute.String;
-    Ready_to_build: Schema.Attribute.String;
-    Share_this_article: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
+    keep_reading: Schema.Attribute.String;
+    ready_to_build: Schema.Attribute.String;
+    share_text: Schema.Attribute.String;
   };
 }
 
@@ -95,7 +95,7 @@ export interface BlogGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
   };
@@ -107,9 +107,9 @@ export interface BlogGrid extends Struct.ComponentSchema {
     displayName: 'grid';
   };
   attributes: {
-    All_Topics: Schema.Attribute.String;
-    Load_more_stories: Schema.Attribute.String;
-    Search: Schema.Attribute.String;
+    all_topics: Schema.Attribute.String;
+    load_more_stories: Schema.Attribute.String;
+    search: Schema.Attribute.String;
   };
 }
 
@@ -130,7 +130,7 @@ export interface ChromeExtensionGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
   };
@@ -151,10 +151,10 @@ export interface ChromeExtensionGridChromeExtension
     card_3_title: Schema.Attribute.String;
     card_4_description: Schema.Attribute.Text;
     card_4_title: Schema.Attribute.String;
-    Effortless_LinkedIn_Prospecting: Schema.Attribute.Text;
-    Email_Phone_Job_Title_Lists: Schema.Attribute.Text;
-    Endless_fresh_opportunities_available_to_you: Schema.Attribute.Text;
-    Selling_with_context: Schema.Attribute.Text;
+    feature1: Schema.Attribute.Text;
+    feature2: Schema.Attribute.Text;
+    feature3: Schema.Attribute.Text;
+    feature4: Schema.Attribute.Text;
   };
 }
 
@@ -194,14 +194,14 @@ export interface ContactUsFormContactUs extends Struct.ComponentSchema {
     displayName: 'form_contact_us';
   };
   attributes: {
-    Contact_us: Schema.Attribute.String;
-    Email: Schema.Attribute.String;
-    Firstname: Schema.Attribute.String;
-    Lastname: Schema.Attribute.String;
-    Message: Schema.Attribute.String;
-    Submit: Schema.Attribute.String;
+    contact_us_tag: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    firstname: Schema.Attribute.String;
+    lastname: Schema.Attribute.String;
+    message: Schema.Attribute.String;
+    submit: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    Type_your_message: Schema.Attribute.String;
+    type_your_message: Schema.Attribute.String;
   };
 }
 
@@ -211,7 +211,7 @@ export interface ContactUsGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -223,7 +223,7 @@ export interface ContactUsLocationContactUs extends Struct.ComponentSchema {
     displayName: 'location_contact_us';
   };
   attributes: {
-    Location: Schema.Attribute.String;
+    location: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -269,7 +269,7 @@ export interface EmailFinderGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -281,7 +281,7 @@ export interface EmailFinderGridEmailFinder extends Struct.ComponentSchema {
     displayName: 'grid_email_finder';
   };
   attributes: {
-    Accuracy: Schema.Attribute.String;
+    accuracy: Schema.Attribute.String;
     card_1_description: Schema.Attribute.Text;
     card_1_title: Schema.Attribute.String;
     card_2_description: Schema.Attribute.Text;
@@ -294,7 +294,8 @@ export interface EmailFinderGridEmailFinder extends Struct.ComponentSchema {
     card_5_title: Schema.Attribute.String;
     card_6_description: Schema.Attribute.Text;
     card_6_title: Schema.Attribute.String;
-    Trust: Schema.Attribute.String;
+    speed: Schema.Attribute.String;
+    trust: Schema.Attribute.String;
   };
 }
 
@@ -305,10 +306,10 @@ export interface EmailFinderTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    See_pricing: Schema.Attribute.String;
-    Start_free: Schema.Attribute.String;
+    pricing_button: Schema.Attribute.String;
+    start_free: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    Trusted_by_companies_and_agencies: Schema.Attribute.Text;
+    trusted_by_companies_and_agencies: Schema.Attribute.Text;
   };
 }
 
@@ -329,7 +330,7 @@ export interface HomeAdvantages extends Struct.ComponentSchema {
     displayName: 'advantages';
   };
   attributes: {
-    Advantages: Schema.Attribute.String;
+    advantages_tag: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
   };
@@ -342,7 +343,7 @@ export interface HomeFeatures extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    Features: Schema.Attribute.String;
+    features_tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -353,7 +354,7 @@ export interface HomeGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -366,7 +367,7 @@ export interface HomeHighlights extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    Highlights: Schema.Attribute.String;
+    highlights: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -448,7 +449,7 @@ export interface HomeTestimonials extends Struct.ComponentSchema {
     countries_served: Schema.Attribute.Text;
     fresh_company_records_available: Schema.Attribute.Text;
     hours_freed_up: Schema.Attribute.Text;
-    Testimonials: Schema.Attribute.String;
+    testimonials: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -459,12 +460,12 @@ export interface HomeTools extends Struct.ComponentSchema {
     displayName: 'tools';
   };
   attributes: {
+    credit_system: Schema.Attribute.String;
+    custom_agents: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    Flexible_credit_system: Schema.Attribute.String;
-    Native_HubSpot_integration: Schema.Attribute.String;
-    No_user_limits: Schema.Attribute.String;
-    On_demand_Custom_Agents: Schema.Attribute.String;
+    hubspot_integration: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    user_limits: Schema.Attribute.String;
   };
 }
 
@@ -475,10 +476,10 @@ export interface HomeTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    See_pricing: Schema.Attribute.String;
-    Start_free: Schema.Attribute.String;
+    pricing_button: Schema.Attribute.String;
+    start_free: Schema.Attribute.String;
     title: Schema.Attribute.Text;
-    Trusted_by_companies_and_agencies: Schema.Attribute.Text;
+    trusted_by_companies_and_agencies: Schema.Attribute.Text;
   };
 }
 
@@ -488,20 +489,20 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     displayName: 'footer';
   };
   attributes: {
-    About_us: Schema.Attribute.String;
-    Become_a_Partner: Schema.Attribute.String;
-    Blog: Schema.Attribute.String;
-    Changelog: Schema.Attribute.String;
-    Company: Schema.Attribute.String;
-    Contact: Schema.Attribute.String;
-    Guide: Schema.Attribute.String;
-    Newsletter: Schema.Attribute.String;
-    Pricing: Schema.Attribute.String;
-    Privacy_Policy: Schema.Attribute.String;
-    Product: Schema.Attribute.String;
-    Resources: Schema.Attribute.String;
-    Rights: Schema.Attribute.String;
-    Terms_of_Service: Schema.Attribute.String;
+    about_us: Schema.Attribute.String;
+    become_a_partner: Schema.Attribute.String;
+    blog: Schema.Attribute.String;
+    changelog: Schema.Attribute.String;
+    company: Schema.Attribute.String;
+    contact: Schema.Attribute.String;
+    guide: Schema.Attribute.String;
+    newsletter: Schema.Attribute.String;
+    pricing: Schema.Attribute.String;
+    privacy_policy: Schema.Attribute.String;
+    product: Schema.Attribute.String;
+    resources: Schema.Attribute.String;
+    rights: Schema.Attribute.String;
+    terms_of_service: Schema.Attribute.String;
   };
 }
 
@@ -511,11 +512,11 @@ export interface LayoutNavbar extends Struct.ComponentSchema {
     displayName: 'navbar';
   };
   attributes: {
-    AI_Agents: Schema.Attribute.String;
-    Pricing: Schema.Attribute.String;
-    Resources: Schema.Attribute.String;
-    Sign_in: Schema.Attribute.String;
-    Start_now: Schema.Attribute.String;
+    ai_agents: Schema.Attribute.String;
+    pricing: Schema.Attribute.String;
+    resources: Schema.Attribute.String;
+    sign_in: Schema.Attribute.String;
+    start_now: Schema.Attribute.String;
   };
 }
 
@@ -644,7 +645,7 @@ export interface PrivacyPolicyChangesPrivacyPolicy
     displayName: 'changes_privacy_policy';
   };
   attributes: {
-    Last_updated: Schema.Attribute.String;
+    last_updated: Schema.Attribute.String;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -667,7 +668,7 @@ export interface PrivacyPolicyContactUs extends Struct.ComponentSchema {
     displayName: 'contact_us';
   };
   attributes: {
-    Data_Protection_Officer: Schema.Attribute.Text;
+    data_protection_officer: Schema.Attribute.Text;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -679,9 +680,9 @@ export interface PrivacyPolicyCookiesTracking extends Struct.ComponentSchema {
     displayName: 'cookies_tracking';
   };
   attributes: {
-    Analyze_audience_and_improve_user_experience: Schema.Attribute.String;
-    Ensure_proper_functioning_of_our_website: Schema.Attribute.Text;
-    Offer_relevant_content: Schema.Attribute.String;
+    analyze_audience_and_improve_user_experience: Schema.Attribute.String;
+    ensure_proper_functioning_of_our_website: Schema.Attribute.Text;
+    offer_relevant_content: Schema.Attribute.String;
     text: Schema.Attribute.Text;
     text_2: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -694,16 +695,16 @@ export interface PrivacyPolicyHowLongKeepData extends Struct.ComponentSchema {
     displayName: 'how_long_keep_data';
   };
   attributes: {
-    Cookies: Schema.Attribute.String;
-    Cookies_period: Schema.Attribute.Text;
-    CRM_data: Schema.Attribute.String;
-    CRM_data_period: Schema.Attribute.Text;
-    Customer_account_data: Schema.Attribute.String;
-    Customer_account_data_period: Schema.Attribute.Text;
-    Data_Type: Schema.Attribute.String;
-    Marketing_data: Schema.Attribute.String;
-    Marketing_data_period: Schema.Attribute.String;
-    Retention_Period: Schema.Attribute.String;
+    cookies: Schema.Attribute.String;
+    cookies_period: Schema.Attribute.Text;
+    crm_data: Schema.Attribute.String;
+    crm_data_period: Schema.Attribute.Text;
+    customer_account_data: Schema.Attribute.String;
+    customer_account_data_period: Schema.Attribute.Text;
+    data_type: Schema.Attribute.String;
+    marketing_data: Schema.Attribute.String;
+    marketing_data_period: Schema.Attribute.String;
+    retention_period: Schema.Attribute.String;
     text: Schema.Attribute.Text;
     text_2: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -717,9 +718,9 @@ export interface PrivacyPolicyInternationalDataTransfers
     displayName: 'international_data_transfers';
   };
   attributes: {
-    Data_Privacy_Framework: Schema.Attribute.String;
-    Equivalent_mechanisms_recognized_by_the_European_Commission: Schema.Attribute.String;
-    Standard_Contractual_Clauses: Schema.Attribute.String;
+    data_privacy_framework: Schema.Attribute.String;
+    equivalent_mechanisms_recognized_by_the_European_Commission: Schema.Attribute.String;
+    standard_contractual_clauses: Schema.Attribute.String;
     text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -742,20 +743,20 @@ export interface PrivacyPolicyWhatWeCollect extends Struct.ComponentSchema {
     displayName: 'what_we_collect';
   };
   attributes: {
-    Account_Information: Schema.Attribute.String;
-    Account_Information_example: Schema.Attribute.Text;
-    Billing_Information: Schema.Attribute.String;
-    Billing_Information_example: Schema.Attribute.Text;
-    CRM_Data: Schema.Attribute.String;
-    CRM_Data_example: Schema.Attribute.Text;
-    Data_Category: Schema.Attribute.String;
-    Examples: Schema.Attribute.String;
+    account_information: Schema.Attribute.String;
+    account_information_example: Schema.Attribute.Text;
+    billing_information: Schema.Attribute.String;
+    billing_information_example: Schema.Attribute.Text;
+    crm_data: Schema.Attribute.String;
+    crm_data_example: Schema.Attribute.Text;
+    data_category: Schema.Attribute.String;
+    examples: Schema.Attribute.String;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
-    Usage_Data: Schema.Attribute.String;
-    Usage_Data_example: Schema.Attribute.Text;
-    Website_Data: Schema.Attribute.String;
-    Website_Data_example: Schema.Attribute.Text;
+    usage_data: Schema.Attribute.String;
+    usage_data_example: Schema.Attribute.Text;
+    website_data: Schema.Attribute.String;
+    website_data_example: Schema.Attribute.Text;
   };
 }
 
@@ -776,9 +777,9 @@ export interface PrivacyPolicyWhoShareData extends Struct.ComponentSchema {
     displayName: 'who_share_data';
   };
   attributes: {
-    CRM_integrations: Schema.Attribute.String;
-    Legal_authorities: Schema.Attribute.String;
-    Service_providers: Schema.Attribute.String;
+    crm_integrations: Schema.Attribute.String;
+    legal_authorities: Schema.Attribute.String;
+    service_providers: Schema.Attribute.String;
     text: Schema.Attribute.String;
     text_2: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -791,20 +792,20 @@ export interface PrivacyPolicyWhyUseData extends Struct.ComponentSchema {
     displayName: 'why_use_data';
   };
   attributes: {
-    Comply_with_legal_obligations: Schema.Attribute.String;
-    Comply_with_legal_obligations_legal: Schema.Attribute.String;
-    Customer_support_and_communication: Schema.Attribute.String;
-    Customer_support_and_communication_legal: Schema.Attribute.String;
-    Improve_and_personalize_our_services: Schema.Attribute.String;
-    Improve_and_personalize_our_services_legal: Schema.Attribute.String;
-    Legal_Basis: Schema.Attribute.String;
-    Marketing_communications: Schema.Attribute.String;
-    Marketing_communications_legal: Schema.Attribute.String;
-    Protect_our_rights_and_prevent_fraud: Schema.Attribute.String;
-    Protect_our_rights_and_prevent_fraud_legal: Schema.Attribute.String;
-    Provide_and_operate_our_services: Schema.Attribute.String;
-    Provide_and_operate_our_services_legal: Schema.Attribute.String;
-    Purpose: Schema.Attribute.String;
+    comply_with_legal_obligations: Schema.Attribute.String;
+    comply_with_legal_obligations_legal: Schema.Attribute.String;
+    customer_support_and_communication: Schema.Attribute.String;
+    customer_support_and_communication_legal: Schema.Attribute.String;
+    improve_and_personalize_our_services: Schema.Attribute.String;
+    improve_and_personalize_our_services_legal: Schema.Attribute.String;
+    legal_basis: Schema.Attribute.String;
+    marketing_communications: Schema.Attribute.String;
+    marketing_communications_legal: Schema.Attribute.String;
+    protect_our_rights_and_prevent_fraud: Schema.Attribute.String;
+    protect_our_rights_and_prevent_fraud_legal: Schema.Attribute.String;
+    provide_and_operate_our_services: Schema.Attribute.String;
+    provide_and_operate_our_services_legal: Schema.Attribute.String;
+    purpose: Schema.Attribute.String;
     text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -816,15 +817,15 @@ export interface PrivacyPolicyYourRights extends Struct.ComponentSchema {
     displayName: 'your_rights';
   };
   attributes: {
-    Access_your_data: Schema.Attribute.String;
-    Request_correction_of_inaccurate_data: Schema.Attribute.Text;
-    Request_data_portability: Schema.Attribute.Text;
-    Request_deletion_of_your_data: Schema.Attribute.Text;
-    Restrict_or_object_to_data_processing: Schema.Attribute.Text;
+    access_your_data: Schema.Attribute.String;
+    request_correction_of_inaccurate_data: Schema.Attribute.Text;
+    request_data_portability: Schema.Attribute.Text;
+    request_deletion_of_your_data: Schema.Attribute.Text;
+    restrict_or_object_to_data_processing: Schema.Attribute.Text;
     text: Schema.Attribute.Text;
     text_2: Schema.Attribute.Text;
     title: Schema.Attribute.String;
-    Withdraw_consent_at_any_time: Schema.Attribute.Text;
+    withdraw_consent_at_any_time: Schema.Attribute.Text;
   };
 }
 

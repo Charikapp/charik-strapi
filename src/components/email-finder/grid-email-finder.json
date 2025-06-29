@@ -5,10 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "Trust": {
+    "trust": {
       "type": "string"
     },
-    "Accuracy": {
+    "speed": {
+      "type": "string"
+    },
+    "accuracy": {
       "type": "string"
     },
     "card_1_title": {

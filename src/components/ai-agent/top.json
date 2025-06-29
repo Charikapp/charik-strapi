@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "The_Smartest_Way_to_Generate_Leads": {
+    "slogon": {
       "type": "string"
     },
     "title": {
@@ -14,7 +14,7 @@
     "description": {
       "type": "text"
     },
-    "Trusted_by_companies_and_agencies": {
+    "trusted_by_companies_and_agencies": {
       "type": "text"
     }
   },

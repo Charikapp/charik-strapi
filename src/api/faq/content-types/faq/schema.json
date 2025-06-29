@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "FAQ": {
+    "faq_tag": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
