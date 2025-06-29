@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_pricing_swicth_offers",
+  "info": {
+    "displayName": "swicth_offers"
+  },
+  "options": {},
+  "attributes": {
+    "monthly": {
+      "type": "string"
+    },
+    "yearly": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    },
+    "month": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "subscribe_now": {
+      "type": "string"
+    },
+    "get_started_free": {
+      "type": "string"
+    },
+    "no_card_required": {
+      "type": "string"
+    },
+    "credits_month": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

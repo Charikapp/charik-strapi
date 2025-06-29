@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pricing_compares",
+  "info": {
+    "displayName": "compare"
+  },
+  "options": {},
+  "attributes": {
+    "Compare": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

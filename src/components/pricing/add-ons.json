@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pricing_add_ons",
+  "info": {
+    "displayName": "add_ons"
+  },
+  "options": {},
+  "attributes": {
+    "addons": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

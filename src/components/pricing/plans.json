@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_pricing_plans",
+  "info": {
+    "displayName": "plans"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "optional_benefit": {
+      "type": "string"
+    },
+    "benefits": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

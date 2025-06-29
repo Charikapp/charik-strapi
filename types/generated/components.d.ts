@@ -519,6 +519,112 @@ export interface LayoutNavbar extends Struct.ComponentSchema {
   };
 }
 
+export interface PricingAddOns extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_add_ons';
+  info: {
+    displayName: 'add_ons';
+  };
+  attributes: {
+    addons: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PricingAddOnsItems extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_add_ons_items';
+  info: {
+    displayName: 'add_ons_items';
+  };
+  attributes: {
+    button_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    price: Schema.Attribute.String;
+    price_descrition: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PricingCompare extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_compares';
+  info: {
+    displayName: 'compare';
+  };
+  attributes: {
+    Compare: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PricingFeaturesPlans extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_features_plans';
+  info: {
+    displayName: 'features_plans';
+  };
+  attributes: {
+    enterprise: Schema.Attribute.String;
+    feature: Schema.Attribute.String;
+    free: Schema.Attribute.String;
+    pro: Schema.Attribute.String;
+    starter: Schema.Attribute.String;
+  };
+}
+
+export interface PricingGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_get_starteds';
+  info: {
+    displayName: 'get_started';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface PricingPlans extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_plans';
+  info: {
+    displayName: 'plans';
+  };
+  attributes: {
+    benefits: Schema.Attribute.JSON;
+    description: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    optional_benefit: Schema.Attribute.String;
+  };
+}
+
+export interface PricingSwicthOffers extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_swicth_offers';
+  info: {
+    displayName: 'swicth_offers';
+  };
+  attributes: {
+    credits_month: Schema.Attribute.String;
+    get_started_free: Schema.Attribute.String;
+    month: Schema.Attribute.String;
+    monthly: Schema.Attribute.String;
+    no_card_required: Schema.Attribute.String;
+    subscribe_now: Schema.Attribute.String;
+    user: Schema.Attribute.String;
+    year: Schema.Attribute.String;
+    yearly: Schema.Attribute.String;
+  };
+}
+
+export interface PricingTop extends Struct.ComponentSchema {
+  collectionName: 'components_pricing_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    trusted_by_companies_and_agencies: Schema.Attribute.Text;
+  };
+}
+
 export interface PrivacyPolicyAbout extends Struct.ComponentSchema {
   collectionName: 'components_privacy_policy_abouts';
   info: {
@@ -826,6 +932,14 @@ declare module '@strapi/strapi' {
       'home.top': HomeTop;
       'layout.footer': LayoutFooter;
       'layout.navbar': LayoutNavbar;
+      'pricing.add-ons': PricingAddOns;
+      'pricing.add-ons-items': PricingAddOnsItems;
+      'pricing.compare': PricingCompare;
+      'pricing.features-plans': PricingFeaturesPlans;
+      'pricing.get-started': PricingGetStarted;
+      'pricing.plans': PricingPlans;
+      'pricing.swicth-offers': PricingSwicthOffers;
+      'pricing.top': PricingTop;
       'privacy-policy.about': PrivacyPolicyAbout;
       'privacy-policy.changes-privacy-policy': PrivacyPolicyChangesPrivacyPolicy;
       'privacy-policy.children-privacy': PrivacyPolicyChildrenPrivacy;

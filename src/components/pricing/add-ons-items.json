@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pricing_add_ons_items",
+  "info": {
+    "displayName": "add_ons_items"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "price_descrition": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

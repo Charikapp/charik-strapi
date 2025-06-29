@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pricing_features_plans",
+  "info": {
+    "displayName": "features_plans"
+  },
+  "options": {},
+  "attributes": {
+    "feature": {
+      "type": "string"
+    },
+    "free": {
+      "type": "string"
+    },
+    "starter": {
+      "type": "string"
+    },
+    "pro": {
+      "type": "string"
+    },
+    "enterprise": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
