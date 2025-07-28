@@ -19,8 +19,10 @@ jobs:
     uses: Charikapp/configs/.github/workflows/build.yml@main
     with:
       environment: dev
+      config_repo: "charikapp/configs"
       docker_tag: dev
       docker_file: Dockerfile
+      event_suffix: dev
       docker_registry: "docker.io"
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -34,9 +36,10 @@ jobs:
     uses: Charikapp/configs/.github/workflows/build.yml@main
     with:
       environment: prod
+      config_repo: "charikapp/configs"
       docker_tag: latest
-      event_suffix: prod
       docker_file: Dockerfile.prod
+      event_suffix: prod
       docker_registry: "docker.io"
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
