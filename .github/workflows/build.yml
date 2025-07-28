@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi
           tags: |
             type=raw,value=dev
 
@@ -71,7 +71,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi
           tags: |
             type=raw,value=latest
 
@@ -104,7 +104,7 @@ jobs:
             docker rm charik-strapi-dev || true
             
             # Pull latest image
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:dev
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi:dev
             
             # Run new container
             docker run -d \
@@ -112,7 +112,7 @@ jobs:
               --restart unless-stopped \
               -p 1337:1337 \
               -e NODE_ENV=development \
-              ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:dev
+              ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi:dev
             
             # Clean up old images
             docker image prune -f
@@ -132,11 +132,12 @@ jobs:
           port: ${{ secrets.PROD_PORT || 22 }}
           script: |
             # Stop existing container if running
+            echo "${{secrets.DOCKERHUB_TOKEN}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
             docker stop charik-strapi-prod || true
             docker rm charik-strapi-prod || true
             
             # Pull latest image
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi:latest
             
             # Run new container
             docker run -d \
@@ -144,7 +145,7 @@ jobs:
               --restart unless-stopped \
               -p 1337:1337 \
               -e NODE_ENV=production \
-              ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:latest
+              ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi:latest
             
             # Clean up old images
             docker image prune -f
