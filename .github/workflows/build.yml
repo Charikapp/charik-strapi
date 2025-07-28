@@ -16,32 +16,69 @@ jobs:
   build-and-deploy-dev:
     # Run this job if the pushed branch is 'dev' or starts with 'devOps/'
     if: github.ref == 'refs/heads/dev' || startsWith(github.ref, 'refs/heads/devOps/')
-    uses: Charikapp/configs/.github/workflows/build.yml@main
-    with:
-      environment: dev
-      config_repo: "charikapp/configs"
-      docker_tag: dev
-      docker_file: Dockerfile
-      event_suffix: dev
-      docker_registry: "docker.io"
-    secrets:
-      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images:  ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi
+          tags: |
+            type=raw,value=dev
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
   build-and-deploy-prod:
     # Run this job only for pushes to the 'main' branch
     if: github.ref == 'refs/heads/main'
-    uses: Charikapp/configs/.github/workflows/build.yml@main
-    with:
-      environment: prod
-      config_repo: "charikapp/configs"
-      docker_tag: latest
-      docker_file: Dockerfile.prod
-      event_suffix: prod
-      docker_registry: "docker.io"
-    secrets:
-      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images:  ${{ secrets.DOCKERHUB_USERNAME }}/charik-strapi
+          tags: |
+            type=raw,value=latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.prod
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
