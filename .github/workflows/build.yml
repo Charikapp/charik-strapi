@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - uses: ./.github/actions/deploy
         with:
           environment: dev
@@ -37,6 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - uses: ./.github/actions/deploy
         with:
           environment: prod
