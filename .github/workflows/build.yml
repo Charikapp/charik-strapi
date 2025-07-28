@@ -18,37 +18,71 @@ jobs:
     if: github.ref == 'refs/heads/dev' || startsWith(github.ref, 'refs/heads/devOps/')
     runs-on: ubuntu-latest
     outputs:
-      image_tag: ${{ steps.build.outputs.image_tag }}
+      image_tag: ${{ steps.meta.outputs.tags }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Build Docker Image
-        id: build
-        uses: ./.github/actions/build
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
         with:
-          docker_tag: dev
-          docker_file: Dockerfile
-          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
-          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi
+          tags: |
+            type=raw,value=dev
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
   build-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     outputs:
-      image_tag: ${{ steps.build.outputs.image_tag }}
+      image_tag: ${{ steps.meta.outputs.tags }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Build Docker Image
-        id: build
-        uses: ./.github/actions/build
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
         with:
-          docker_tag: latest
-          docker_file: Dockerfile.prod
-          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
-          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi
+          tags: |
+            type=raw,value=latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.prod
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
   # Deploy Jobs
   deploy-dev:
@@ -57,21 +91,31 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Deploy to Dev Environment
-        uses: ./.github/actions/deploy-only
+      - name: Deploy to Dev Environment via SSH
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          environment: dev
-          docker_tag: dev
-          node_env: development
-          container_name: charik-strapi-dev
           host: ${{ secrets.DEV_HOST }}
           username: ${{ secrets.DEV_USERNAME }}
-          ssh_key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.DEV_PORT || 22 }}
-          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+          script: |
+            # Stop existing container if running
+            docker stop charik-strapi-dev || true
+            docker rm charik-strapi-dev || true
+            
+            # Pull latest image
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:dev
+            
+            # Run new container
+            docker run -d \
+              --name charik-strapi-dev \
+              --restart unless-stopped \
+              -p 1337:1337 \
+              -e NODE_ENV=development \
+              ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:dev
+            
+            # Clean up old images
+            docker image prune -f
 
   deploy-prod:
     needs: build-prod
@@ -79,18 +123,28 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Deploy to Production Environment
-        uses: ./.github/actions/deploy-only
+      - name: Deploy to Production Environment via SSH
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          environment: prod
-          docker_tag: latest
-          node_env: production
-          container_name: charik-strapi-prod
           host: ${{ secrets.PROD_HOST || secrets.DEV_HOST}}
           username: ${{ secrets.PROD_USERNAME || secrets.DEV_USERNAME }}
-          ssh_key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PROD_PORT || 22 }}
-          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+          script: |
+            # Stop existing container if running
+            docker stop charik-strapi-prod || true
+            docker rm charik-strapi-prod || true
+            
+            # Pull latest image
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:latest
+            
+            # Run new container
+            docker run -d \
+              --name charik-strapi-prod \
+              --restart unless-stopped \
+              -p 1337:1337 \
+              -e NODE_ENV=production \
+              ${{ secrets.DOCKERHUB_USERNAME }}/charik123-strapi:latest
+            
+            # Clean up old images
+            docker image prune -f
