@@ -13,7 +13,46 @@ permissions:
   contents: read
 
 jobs:
-  build-and-deploy-dev:
+  # Build Jobs
+  build-dev:
+    if: github.ref == 'refs/heads/dev' || startsWith(github.ref, 'refs/heads/devOps/')
+    runs-on: ubuntu-latest
+    outputs:
+      image_tag: ${{ steps.build.outputs.image_tag }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Build Docker Image
+        id: build
+        uses: ./.github/actions/build
+        with:
+          docker_tag: dev
+          docker_file: Dockerfile
+          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  build-prod:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      image_tag: ${{ steps.build.outputs.image_tag }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Build Docker Image
+        id: build
+        uses: ./.github/actions/build
+        with:
+          docker_tag: latest
+          docker_file: Dockerfile.prod
+          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  # Deploy Jobs
+  deploy-dev:
+    needs: build-dev
     if: github.ref == 'refs/heads/dev' || startsWith(github.ref, 'refs/heads/devOps/')
     runs-on: ubuntu-latest
     environment: dev
@@ -21,11 +60,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - uses: ./.github/actions/deploy
+      - name: Deploy to Dev Environment
+        uses: ./.github/actions/deploy-only
         with:
           environment: dev
           docker_tag: dev
-          docker_file: Dockerfile
           node_env: development
           container_name: charik-strapi-dev
           host: ${{ secrets.DEV_HOST }}
@@ -33,9 +72,9 @@ jobs:
           ssh_key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.DEV_PORT || 22 }}
           dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
-          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
 
-  build-and-deploy-prod:
+  deploy-prod:
+    needs: build-prod
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: prod
@@ -43,11 +82,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - uses: ./.github/actions/deploy
+      - name: Deploy to Production Environment
+        uses: ./.github/actions/deploy-only
         with:
           environment: prod
           docker_tag: latest
-          docker_file: Dockerfile.prod
           node_env: production
           container_name: charik-strapi-prod
           host: ${{ secrets.PROD_HOST || secrets.DEV_HOST}}
@@ -55,4 +94,3 @@ jobs:
           ssh_key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PROD_PORT || 22 }}
           dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
-          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}

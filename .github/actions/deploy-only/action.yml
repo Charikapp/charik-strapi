@@ -1,0 +1,61 @@
+name: 'Deploy Application'
+description: 'Deploy Docker image via SSH'
+
+inputs:
+  environment:
+    description: 'Environment name (dev/prod)'
+    required: true
+  docker_tag:
+    description: 'Docker tag to use'
+    required: true
+  node_env:
+    description: 'NODE_ENV value'
+    required: true
+  container_name:
+    description: 'Container name'
+    required: true
+  host:
+    description: 'SSH host'
+    required: true
+  username:
+    description: 'SSH username'
+    required: true
+  ssh_key:
+    description: 'SSH private key'
+    required: true
+  port:
+    description: 'SSH port'
+    required: false
+    default: '22'
+  dockerhub_username:
+    description: 'Docker Hub username'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Deploy to ${{ inputs.environment }} Server via SSH
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ inputs.host }}
+        username: ${{ inputs.username }}
+        key: ${{ inputs.ssh_key }}
+        port: ${{ inputs.port }}
+        script: |
+          # Stop existing container if running
+          docker stop ${{ inputs.container_name }} || true
+          docker rm ${{ inputs.container_name }} || true
+          
+          # Pull latest image
+          docker pull ${{ inputs.dockerhub_username }}/charik123-strapi:${{ inputs.docker_tag }}
+          
+          # Run new container
+          docker run -d \
+            --name ${{ inputs.container_name }} \
+            --restart unless-stopped \
+            -p 1337:1337 \
+            -e NODE_ENV=${{ inputs.node_env }} \
+            ${{ inputs.dockerhub_username }}/charik123-strapi:${{ inputs.docker_tag }}
+          
+          # Clean up old images
+          docker image prune -f
