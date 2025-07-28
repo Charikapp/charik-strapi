@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_navbar_actions",
+  "info": {
+    "displayName": "actions"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "connected": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

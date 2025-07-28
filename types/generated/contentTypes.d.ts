@@ -440,9 +440,27 @@ export interface ApiAiAgentAiAgent extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    what_ai_agent_swiper: Schema.Attribute.Component<
+      'ai-agent.what-ai-agent-swiper',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     why_use_AI_agents: Schema.Attribute.Component<
       'ai-agent.why-use-ai-agents',
       false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    why_use_ai_agents_swiper: Schema.Attribute.Component<
+      'ai-agent.swiper',
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1026,6 +1044,58 @@ export interface ApiLayoutLayout extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::layout.layout'>;
     navbar: Schema.Attribute.Component<'layout.navbar', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'navbars';
+  info: {
+    displayName: 'Navbar';
+    pluralName: 'navbars';
+    singularName: 'navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    actions: Schema.Attribute.Component<'navbar.actions', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    languages: Schema.Attribute.Component<'navbar.lang', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::navbar.navbar'>;
+    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    menu: Schema.Attribute.Component<'navbar.menu', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1803,6 +1873,7 @@ declare module '@strapi/strapi' {
       'api::faq.faq': ApiFaqFaq;
       'api::home.home': ApiHomeHome;
       'api::layout.layout': ApiLayoutLayout;
+      'api::navbar.navbar': ApiNavbarNavbar;
       'api::pricing.pricing': ApiPricingPricing;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'plugin::content-releases.release': PluginContentReleasesRelease;

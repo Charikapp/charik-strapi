@@ -53,6 +53,16 @@
       "component": "ai-agent.what-ai-agent",
       "repeatable": false
     },
+    "what_ai_agent_swiper": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.what-ai-agent-swiper",
+      "repeatable": true
+    },
     "how_it_works": {
       "type": "component",
       "pluginOptions": {
@@ -82,6 +92,16 @@
       },
       "component": "ai-agent.why-use-ai-agents",
       "repeatable": false
+    },
+    "why_use_ai_agents_swiper": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ai-agent.swiper",
+      "repeatable": true
     }
   }
 }

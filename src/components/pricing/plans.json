@@ -16,6 +16,21 @@
     },
     "benefits": {
       "type": "json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    },
+    "credits": {
+      "type": "string"
+    },
+    "monthly": {
+      "type": "string"
+    },
+    "yearly": {
+      "type": "string"
     }
   },
   "config": {}

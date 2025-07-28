@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navbar_langs",
+  "info": {
+    "displayName": "lang"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

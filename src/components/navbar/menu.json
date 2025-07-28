@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_navbar_menus",
+  "info": {
+    "displayName": "menu"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "submenu": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

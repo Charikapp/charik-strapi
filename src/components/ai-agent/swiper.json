@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ai_agent_swipers",
+  "info": {
+    "displayName": "swiper"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

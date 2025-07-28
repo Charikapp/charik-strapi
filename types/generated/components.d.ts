@@ -23,6 +23,16 @@ export interface AiAgentHowItWorks extends Struct.ComponentSchema {
   };
 }
 
+export interface AiAgentSwiper extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_swipers';
+  info: {
+    displayName: 'swiper';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+  };
+}
+
 export interface AiAgentSwiperHowItWorks extends Struct.ComponentSchema {
   collectionName: 'components_ai_agent_swiper_how_it_works';
   info: {
@@ -58,6 +68,16 @@ export interface AiAgentWhatAiAgent extends Struct.ComponentSchema {
     swiper2: Schema.Attribute.Text;
     swiper3: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface AiAgentWhatAiAgentSwiper extends Struct.ComponentSchema {
+  collectionName: 'components_ai_agent_what_ai_agent_swipers';
+  info: {
+    displayName: 'what_ai_agent_swiper';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
   };
 }
 
@@ -117,6 +137,17 @@ export interface BlogTop extends Struct.ComponentSchema {
   collectionName: 'components_blog_tops';
   info: {
     displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ChromeExtensionCards extends Struct.ComponentSchema {
+  collectionName: 'components_chrome_extension_cards';
+  info: {
+    displayName: 'cards';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -520,6 +551,41 @@ export interface LayoutNavbar extends Struct.ComponentSchema {
   };
 }
 
+export interface NavbarActions extends Struct.ComponentSchema {
+  collectionName: 'components_navbar_actions';
+  info: {
+    displayName: 'actions';
+  };
+  attributes: {
+    connected: Schema.Attribute.Boolean;
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
+export interface NavbarLang extends Struct.ComponentSchema {
+  collectionName: 'components_navbar_langs';
+  info: {
+    displayName: 'lang';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    lang: Schema.Attribute.String;
+  };
+}
+
+export interface NavbarMenu extends Struct.ComponentSchema {
+  collectionName: 'components_navbar_menus';
+  info: {
+    displayName: 'menu';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    submenu: Schema.Attribute.JSON;
+  };
+}
+
 export interface PricingAddOns extends Struct.ComponentSchema {
   collectionName: 'components_pricing_add_ons';
   info: {
@@ -590,9 +656,14 @@ export interface PricingPlans extends Struct.ComponentSchema {
   };
   attributes: {
     benefits: Schema.Attribute.JSON;
+    credits: Schema.Attribute.String;
     description: Schema.Attribute.String;
     label: Schema.Attribute.String;
+    level: Schema.Attribute.String;
+    monthly: Schema.Attribute.String;
+    name: Schema.Attribute.String;
     optional_benefit: Schema.Attribute.String;
+    yearly: Schema.Attribute.String;
   };
 }
 
@@ -896,14 +967,17 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'ai-agent.get-started': AiAgentGetStarted;
       'ai-agent.how-it-works': AiAgentHowItWorks;
+      'ai-agent.swiper': AiAgentSwiper;
       'ai-agent.swiper-how-it-works': AiAgentSwiperHowItWorks;
       'ai-agent.top': AiAgentTop;
       'ai-agent.what-ai-agent': AiAgentWhatAiAgent;
+      'ai-agent.what-ai-agent-swiper': AiAgentWhatAiAgentSwiper;
       'ai-agent.why-use-ai-agents': AiAgentWhyUseAiAgents;
       'blog.article': BlogArticle;
       'blog.get-started': BlogGetStarted;
       'blog.grid': BlogGrid;
       'blog.top': BlogTop;
+      'chrome-extension.cards': ChromeExtensionCards;
       'chrome-extension.get-started': ChromeExtensionGetStarted;
       'chrome-extension.grid-chrome-extension': ChromeExtensionGridChromeExtension;
       'chrome-extension.tools': ChromeExtensionTools;
@@ -933,6 +1007,9 @@ declare module '@strapi/strapi' {
       'home.top': HomeTop;
       'layout.footer': LayoutFooter;
       'layout.navbar': LayoutNavbar;
+      'navbar.actions': NavbarActions;
+      'navbar.lang': NavbarLang;
+      'navbar.menu': NavbarMenu;
       'pricing.add-ons': PricingAddOns;
       'pricing.add-ons-items': PricingAddOnsItems;
       'pricing.compare': PricingCompare;
