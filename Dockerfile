@@ -1,19 +1,40 @@
 FROM node:18-alpine
-# Installing libvips-dev for sharp Compatibility
-RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/
-COPY package.json package-lock.json ./
-RUN npm install -g node-gyp
-RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install
-ENV PATH /opt/node_modules/.bin:$PATH
+# Install dependencies
+RUN apk add --no-cache python3 make g++
 
+# Create app directory
 WORKDIR /opt/app
-COPY . .
-RUN chown -R node:node /opt/app
-USER node
-RUN ["npm", "run", "build"]
+
+# Create non-root user
+RUN addgroup -g 1001 -S strapi && \
+    adduser -S strapi -u 1001
+
+# Copy package files first for better caching
+COPY --chown=strapi:strapi package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production -f && npm cache clean --force
+
+# Copy application source code
+COPY --chown=strapi:strapi . .
+
+# Ensure data directory and file exist
+RUN mkdir -p src/data && \
+    touch src/data/data.json && \
+    echo '{}' > src/data/data.json
+
+# Set proper permissions
+RUN chown -R strapi:strapi /opt/app
+
+# Switch to non-root user
+USER strapi
+
+# Expose port
 EXPOSE 1337
+
+# Environment
+ENV NODE_ENV=production
+
+# Start the application
 CMD ["npm", "run", "develop"]

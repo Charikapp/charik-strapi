@@ -2,9 +2,9 @@ version: "3"
 services:
   strapi:
     container_name: Charik.strapi
-    image: charik123/charik-strapi
+    image: charik123/charik-strapi:dev
     restart: unless-stopped
-    env_file: .env
+    # env_file: .env
     environment:
       DATABASE_CLIENT: sqlite
       DATABASE_FILENAME: /data/data.db
