@@ -1,0 +1,44 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - dev
+      - stage
+      - main
+      - devOps/**
+
+permissions:
+  packages: write
+  contents: read
+
+jobs:
+  build-and-deploy-dev:
+    # Run this job if the pushed branch is 'dev' or starts with 'devOps/'
+    if: github.ref == 'refs/heads/dev' || startsWith(github.ref, 'refs/heads/devOps/')
+    uses: Charikapp/configs/.github/workflows/build.yml@main
+    with:
+      environment: dev
+      docker_tag: dev
+      docker_file: Dockerfile
+      docker_registry: "docker.io"
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+
+  build-and-deploy-prod:
+    # Run this job only for pushes to the 'main' branch
+    if: github.ref == 'refs/heads/main'
+    uses: Charikapp/configs/.github/workflows/build.yml@main
+    with:
+      environment: prod
+      docker_tag: latest
+      event_suffix: prod
+      docker_file: Dockerfile.prod
+      docker_registry: "docker.io"
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
