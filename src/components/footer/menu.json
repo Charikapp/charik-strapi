@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_menus",
+  "info": {
+    "displayName": "menu"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

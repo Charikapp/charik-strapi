@@ -355,6 +355,41 @@ export interface FaqFaqItems extends Struct.ComponentSchema {
   };
 }
 
+export interface FooterAction extends Struct.ComponentSchema {
+  collectionName: 'components_footer_actions';
+  info: {
+    displayName: 'action';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
+export interface FooterMenu extends Struct.ComponentSchema {
+  collectionName: 'components_footer_menus';
+  info: {
+    displayName: 'menu';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    section: Schema.Attribute.String;
+  };
+}
+
+export interface FooterSocials extends Struct.ComponentSchema {
+  collectionName: 'components_footer_socials';
+  info: {
+    displayName: 'socials';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
 export interface HomeAdvantages extends Struct.ComponentSchema {
   collectionName: 'components_home_advantages';
   info: {
@@ -992,6 +1027,9 @@ declare module '@strapi/strapi' {
       'email-finder.grid-email-finder': EmailFinderGridEmailFinder;
       'email-finder.top': EmailFinderTop;
       'faq.faq-items': FaqFaqItems;
+      'footer.action': FooterAction;
+      'footer.menu': FooterMenu;
+      'footer.socials': FooterSocials;
       'home.advantages': HomeAdvantages;
       'home.features': HomeFeatures;
       'home.get-started': HomeGetStarted;

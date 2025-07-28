@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_actions",
+  "info": {
+    "displayName": "action"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
