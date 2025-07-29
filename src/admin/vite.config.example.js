@@ -9,6 +9,7 @@ module.exports = (config) => {
       },
     },
     server: {
+      port: 1337,
       allowedHosts: ["strapi.charik.app"],
     },
   });
