@@ -32,8 +32,9 @@ COPY --from=builder /opt/app/server.js ./
 COPY --from=builder /opt/app/public ./public
 COPY --from=builder /opt/app/src ./src
 COPY --from=builder /opt/app/config ./config
-COPY --from=builder /opt/app/data ./data
-COPY --from=builder /opt/app/types ./types
+# COPY --from=builder /opt/app/data ./data
+# COPY --from=builder /opt/app/types ./types
+COPY . .
 
 # Set environment variable if needed
 # ENV NODE_ENV=production
