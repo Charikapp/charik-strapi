@@ -1,40 +1,41 @@
-FROM node:18-alpine
+# Builder stage: install dependencies and build the app
+FROM node:18-alpine AS builder
 
-# Install dependencies
-RUN apk add --no-cache python3 make g++
+# Install system dependencies for sharp
+RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
 
-# Create app directory
 WORKDIR /opt/app
 
-# Create non-root user
-RUN addgroup -g 1001 -S strapi && \
-    adduser -S strapi -u 1001
+# Copy only package files first for better layer caching
+COPY package.json package-lock.json ./
+RUN npm install -g node-gyp
+RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install
 
-# Copy package files first for better caching
-COPY --chown=strapi:strapi package*.json ./
+# Copy the rest of the source code
+COPY . .
 
-# Install dependencies
-RUN npm ci --only=production -f && npm cache clean --force
+# Build the app (if you have a build step, e.g., for admin panel)
+# RUN npm run build
 
-# Copy application source code
-COPY --chown=strapi:strapi . .
+# Runner stage: use official Strapi image
+FROM strapi/strapi:latest
 
-# Ensure data directory and file exist
-RUN mkdir -p src/data && \
-    touch src/data/data.json && \
-    echo '{}' > src/data/data.json
+WORKDIR /srv/app
 
-# Set proper permissions
-RUN chown -R strapi:strapi /opt/app
+# Copy node_modules and build artifacts from builder
+COPY --from=builder /opt/app/node_modules ./node_modules
+COPY --from=builder /opt/app/build ./build
 
-# Switch to non-root user
-USER strapi
+# Copy essential files and source code
+COPY --from=builder /opt/app/package.json ./
+COPY --from=builder /opt/app/server.js ./
+COPY --from=builder /opt/app/public ./public
+COPY --from=builder /opt/app/src ./src
+COPY --from=builder /opt/app/config ./config
+COPY --from=builder /opt/app/data ./data
+COPY --from=builder /opt/app/types ./types
 
-# Expose port
-EXPOSE 1337
+# Set environment variable if needed
+# ENV NODE_ENV=production
 
-# Environment
-ENV NODE_ENV=production
-
-# Start the application
-CMD ["npm", "run", "develop"]
+CMD ["strapi", "start"]
