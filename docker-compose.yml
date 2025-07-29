@@ -13,6 +13,7 @@ services:
       ADMIN_JWT_SECRET: tobemodified
       TRANSFER_TOKEN_SALT: tobemodified
       JWT_SECRET: tobemodified
+      PUBLIC_URL: strapi.charik.app
       # DATABASE_CLIENT: ${DATABASE_CLIENT}
       # DATABASE_HOST: strapiDB
       # DATABASE_PORT: ${DATABASE_PORT}
@@ -27,8 +28,8 @@ services:
       - /volume/data:/data
     ports:
       - "1337:1337"
-    # networks:
-    #   - strapi
+    networks:
+      - charik-net
     # depends_on:
     #   - strapiDB
 
@@ -51,11 +52,9 @@ services:
   #     - "3306:3306"
   #   networks:
   #     - strapi
-
 # volumes:
-  # strapi-data:
+# strapi-data:
 
-# networks:
-#   strapi:
-#     name: Strapi
-#     driver: bridge
+networks:
+  charik-net:
+    external: true
