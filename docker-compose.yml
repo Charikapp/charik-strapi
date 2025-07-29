@@ -2,7 +2,7 @@ version: "3"
 services:
   strapi:
     container_name: Charik.strapi
-    image: charik123/charik-strapi:dev
+    image: charik123/charik-strapi:latest
     restart: unless-stopped
     # env_file: .env
     environment:
