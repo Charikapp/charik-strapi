@@ -13,7 +13,7 @@ services:
       ADMIN_JWT_SECRET: tobemodified
       TRANSFER_TOKEN_SALT: tobemodified
       JWT_SECRET: tobemodified
-      PUBLIC_URL: strapi.charik.app
+      PUBLIC_URL: "https://strapi.charik.app"
       # DATABASE_CLIENT: ${DATABASE_CLIENT}
       # DATABASE_HOST: strapiDB
       # DATABASE_PORT: ${DATABASE_PORT}
