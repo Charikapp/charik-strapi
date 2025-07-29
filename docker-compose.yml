@@ -23,7 +23,7 @@ services:
       # JWT_SECRET: ${JWT_SECRET}
       # ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       # APP_KEYS: ${APP_KEYS}
-      # NODE_ENV: ${NODE_ENV}
+      NODE_ENV: production
     volumes:
       - /volume/data:/data
     ports:
