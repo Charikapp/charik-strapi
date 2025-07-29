@@ -1,39 +1,31 @@
-# Builder stage: install dependencies and build the app
 FROM node:18-alpine AS builder
-
-# Install system dependencies for sharp
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
+
+WORKDIR /opt/
+COPY package.json yarn.lock ./
+RUN yarn global add node-gyp
+RUN yarn config set network-timeout 600000 -g && yarn install
+ENV PATH /opt/node_modules/.bin:$PATH
 
 WORKDIR /opt/app
-
-# Copy only package files first for better layer caching
-COPY package.json package-lock.json ./
-RUN npm install -g node-gyp
-RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install
-
-# Copy the rest of the source code
 COPY . .
-
-# Build the app (if you have a build step, e.g., for admin panel)
-# RUN npm run build
+RUN ["yarn", "build"]
 
 # Runner stage: use official Strapi image
 FROM strapi/strapi:latest
 
-WORKDIR /srv/app
+WORKDIR /opt/app/
 
 # Copy node_modules and build artifacts from builder
 COPY --from=builder /opt/app/node_modules ./node_modules
 COPY --from=builder /opt/app/build ./build
+COPY --from=builder /opt/app/config ./config
+COPY --from=builder /opt/app/src ./src
+COPY --from=builder /opt/app/public ./public
 
 # Copy essential files and source code
-COPY --from=builder /opt/app/package.json ./
-COPY --from=builder /opt/app/server.js ./
-COPY --from=builder /opt/app/public ./public
-COPY --from=builder /opt/app/src ./src
-COPY --from=builder /opt/app/config ./config
-# COPY --from=builder /opt/app/data ./data
-# COPY --from=builder /opt/app/types ./types
 COPY . .
 
 # Set environment variable if needed
