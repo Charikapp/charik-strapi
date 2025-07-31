@@ -241,8 +241,10 @@ export interface ContactUsGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -266,6 +268,7 @@ export interface ContactUsLocationContactUsItems
   };
   attributes: {
     description: Schema.Attribute.Text;
+    link: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -276,6 +279,7 @@ export interface ContactUsService extends Struct.ComponentSchema {
     displayName: 'service';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -416,8 +420,10 @@ export interface EmailFinderGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -428,21 +434,17 @@ export interface EmailFinderGridEmailFinder extends Struct.ComponentSchema {
     displayName: 'grid_email_finder';
   };
   attributes: {
-    accuracy: Schema.Attribute.String;
     card_1_description: Schema.Attribute.Text;
+    card_1_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     card_1_title: Schema.Attribute.String;
     card_2_description: Schema.Attribute.Text;
+    card_2_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     card_2_title: Schema.Attribute.String;
-    card_3_description: Schema.Attribute.Text;
-    card_3_title: Schema.Attribute.String;
-    card_4_description: Schema.Attribute.Text;
-    card_4_title: Schema.Attribute.String;
-    card_5_description: Schema.Attribute.Text;
-    card_5_title: Schema.Attribute.String;
-    card_6_description: Schema.Attribute.Text;
-    card_6_title: Schema.Attribute.String;
-    speed: Schema.Attribute.String;
-    trust: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -453,10 +455,12 @@ export interface EmailFinderTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     pricing_button: Schema.Attribute.String;
+    pricing_button_link: Schema.Attribute.String;
     start_free: Schema.Attribute.String;
+    start_free_link: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    trusted_by_companies_and_agencies: Schema.Attribute.Text;
   };
 }
 

@@ -43,16 +43,6 @@
       "component": "email-finder.top",
       "repeatable": false
     },
-    "trusted_companies": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.trusted-companies",
-      "repeatable": false
-    },
     "grid_email_finder": {
       "type": "component",
       "pluginOptions": {
@@ -61,6 +51,16 @@
         }
       },
       "component": "email-finder.grid-email-finder",
+      "repeatable": false
+    },
+    "trusted_companies": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.trusted-companies",
       "repeatable": false
     }
   }

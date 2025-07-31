@@ -5,13 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "trust": {
-      "type": "string"
-    },
-    "speed": {
-      "type": "string"
-    },
-    "accuracy": {
+    "title": {
       "type": "string"
     },
     "card_1_title": {
@@ -20,35 +14,31 @@
     "card_1_description": {
       "type": "text"
     },
+    "card_1_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "card_2_title": {
       "type": "string"
     },
     "card_2_description": {
       "type": "text"
     },
-    "card_3_title": {
-      "type": "string"
-    },
-    "card_3_description": {
-      "type": "text"
-    },
-    "card_4_title": {
-      "type": "string"
-    },
-    "card_4_description": {
-      "type": "text"
-    },
-    "card_5_title": {
-      "type": "string"
-    },
-    "card_5_description": {
-      "type": "text"
-    },
-    "card_6_title": {
-      "type": "string"
-    },
-    "card_6_description": {
-      "type": "text"
+    "card_2_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
