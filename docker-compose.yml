@@ -25,7 +25,9 @@ services:
       # APP_KEYS: ${APP_KEYS}
       NODE_ENV: production
     volumes:
-      - /volume/data:/data
+      # - /volume/data:/data
+      - /volume/strapi/data:/opt/app/data
+      - /volume/strapi/public:/opt/app/public
     ports:
       - "1337:1337"
     networks:
