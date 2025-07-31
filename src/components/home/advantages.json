@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "advantages_tag": {
+    "tag": {
       "type": "string"
     },
     "title": {

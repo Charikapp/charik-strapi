@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "highlights": {
+    "tag": {
       "type": "string"
     },
     "title": {

@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "testimonials": {
+    "tag": {
       "type": "string"
     },
     "title": {

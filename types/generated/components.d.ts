@@ -516,8 +516,8 @@ export interface HomeAdvantages extends Struct.ComponentSchema {
     displayName: 'advantages';
   };
   attributes: {
-    advantages_tag: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -529,7 +529,7 @@ export interface HomeFeatures extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    features_tag: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -540,8 +540,10 @@ export interface HomeGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -553,7 +555,7 @@ export interface HomeHighlights extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    highlights: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -565,7 +567,7 @@ export interface HomeHowItWorks extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    How_it_works: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -577,7 +579,11 @@ export interface HomeSponsors extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    our_sponsors: Schema.Attribute.String;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -589,6 +595,7 @@ export interface HomeSwiperAdvantages extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -600,6 +607,7 @@ export interface HomeSwiperFeatures extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -611,6 +619,7 @@ export interface HomeSwiperHighlights extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -622,6 +631,7 @@ export interface HomeSwiperHowItWorks extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -635,7 +645,7 @@ export interface HomeTestimonials extends Struct.ComponentSchema {
     countries_served: Schema.Attribute.Text;
     fresh_company_records_available: Schema.Attribute.Text;
     hours_freed_up: Schema.Attribute.Text;
-    testimonials: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -662,10 +672,12 @@ export interface HomeTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     pricing_button: Schema.Attribute.String;
+    pricing_button_link: Schema.Attribute.String;
     start_free: Schema.Attribute.String;
+    start_free_link: Schema.Attribute.String;
     title: Schema.Attribute.Text;
-    trusted_by_companies_and_agencies: Schema.Attribute.Text;
   };
 }
 

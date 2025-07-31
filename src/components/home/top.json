@@ -14,11 +14,24 @@
     "start_free": {
       "type": "string"
     },
+    "start_free_link": {
+      "type": "string"
+    },
     "pricing_button": {
       "type": "string"
     },
-    "trusted_by_companies_and_agencies": {
-      "type": "text"
+    "pricing_button_link": {
+      "type": "string"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
