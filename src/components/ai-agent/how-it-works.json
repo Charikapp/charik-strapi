@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "how_it_works": {
+    "tag": {
       "type": "string"
     },
     "title": {

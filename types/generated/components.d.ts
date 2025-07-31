@@ -18,7 +18,7 @@ export interface AiAgentHowItWorks extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    how_it_works: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -30,6 +30,7 @@ export interface AiAgentSwiper extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -40,6 +41,7 @@ export interface AiAgentSwiperHowItWorks extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -51,9 +53,9 @@ export interface AiAgentTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slogon: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    trusted_by_companies_and_agencies: Schema.Attribute.Text;
   };
 }
 
@@ -64,9 +66,6 @@ export interface AiAgentWhatAiAgent extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    swiper1: Schema.Attribute.Text;
-    swiper2: Schema.Attribute.Text;
-    swiper3: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -78,6 +77,7 @@ export interface AiAgentWhatAiAgentSwiper extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -87,12 +87,8 @@ export interface AiAgentWhyUseAiAgents extends Struct.ComponentSchema {
     displayName: 'why_use_AI_agents';
   };
   attributes: {
-    swiper1: Schema.Attribute.Text;
-    swiper2: Schema.Attribute.Text;
-    swiper3: Schema.Attribute.Text;
-    swiper4: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    why_use_ai_agents: Schema.Attribute.String;
   };
 }
 
@@ -115,8 +111,10 @@ export interface BlogGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -140,6 +138,7 @@ export interface BlogTop extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }

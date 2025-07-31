@@ -10,15 +10,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "swiper1": {
-      "type": "text"
-    },
-    "swiper2": {
-      "type": "text"
-    },
-    "swiper3": {
-      "type": "text"
     }
   },
   "config": {}

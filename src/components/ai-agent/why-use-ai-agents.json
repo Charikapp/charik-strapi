@@ -5,23 +5,11 @@
   },
   "options": {},
   "attributes": {
-    "why_use_ai_agents": {
+    "tag": {
       "type": "string"
     },
     "title": {
       "type": "string"
-    },
-    "swiper1": {
-      "type": "text"
-    },
-    "swiper2": {
-      "type": "text"
-    },
-    "swiper3": {
-      "type": "text"
-    },
-    "swiper4": {
-      "type": "text"
     }
   },
   "config": {}
