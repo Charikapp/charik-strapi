@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_custom_agent_how_it_works",
+  "info": {
+    "displayName": "How it works"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text": {
+      "type": "string"
+    },
+    "point1": {
+      "type": "string"
+    },
+    "point2": {
+      "type": "string"
+    },
+    "point3": {
+      "type": "string"
+    },
+    "point4": {
+      "type": "string"
+    },
+    "text_bottom": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

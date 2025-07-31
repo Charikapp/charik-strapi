@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_custom_agent_what_s_a_custom_agent_items",
+  "info": {
+    "displayName": "What s a custom agent items"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

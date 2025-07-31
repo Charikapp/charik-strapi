@@ -294,6 +294,123 @@ export interface ContactUsTop extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomAgentCollaboration extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_collaborations';
+  info: {
+    displayName: 'collaboration';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentCollaborationItems extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_collaboration_items';
+  info: {
+    displayName: 'collaboration items';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_get_starteds';
+  info: {
+    displayName: 'Get started';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    primary_button: Schema.Attribute.String;
+    primary_button_link: Schema.Attribute.String;
+    secondary_button: Schema.Attribute.String;
+    secondary_button_link: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentHowItWorks extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_how_it_works';
+  info: {
+    displayName: 'How it works';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    point1: Schema.Attribute.String;
+    point2: Schema.Attribute.String;
+    point3: Schema.Attribute.String;
+    point4: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+    text_bottom: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentTop extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_tops';
+  info: {
+    displayName: 'top';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentUseCases extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_use_cases';
+  info: {
+    displayName: 'Use cases';
+    icon: 'bold';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentUseCasesItems extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_use_cases_items';
+  info: {
+    displayName: 'Use cases items';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentWhatSACustomAgent extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_what_s_a_custom_agents';
+  info: {
+    displayName: 'What s a custom agent';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    text_bottom: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomAgentWhatSACustomAgentItems
+  extends Struct.ComponentSchema {
+  collectionName: 'components_custom_agent_what_s_a_custom_agent_items';
+  info: {
+    displayName: 'What s a custom agent items';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface EmailFinderGetStarted extends Struct.ComponentSchema {
   collectionName: 'components_email_finder_get_starteds';
   info: {
@@ -997,6 +1114,20 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTrustedCompanies extends Struct.ComponentSchema {
+  collectionName: 'components_shared_trusted_companies';
+  info: {
+    displayName: 'trusted companies';
+  };
+  attributes: {
+    companies: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    text: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -1023,6 +1154,15 @@ declare module '@strapi/strapi' {
       'contact-us.location-contact-us-items': ContactUsLocationContactUsItems;
       'contact-us.service': ContactUsService;
       'contact-us.top': ContactUsTop;
+      'custom-agent.collaboration': CustomAgentCollaboration;
+      'custom-agent.collaboration-items': CustomAgentCollaborationItems;
+      'custom-agent.get-started': CustomAgentGetStarted;
+      'custom-agent.how-it-works': CustomAgentHowItWorks;
+      'custom-agent.top': CustomAgentTop;
+      'custom-agent.use-cases': CustomAgentUseCases;
+      'custom-agent.use-cases-items': CustomAgentUseCasesItems;
+      'custom-agent.what-s-a-custom-agent': CustomAgentWhatSACustomAgent;
+      'custom-agent.what-s-a-custom-agent-items': CustomAgentWhatSACustomAgentItems;
       'email-finder.get-started': EmailFinderGetStarted;
       'email-finder.grid-email-finder': EmailFinderGridEmailFinder;
       'email-finder.top': EmailFinderTop;
@@ -1074,6 +1214,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.trusted-companies': SharedTrustedCompanies;
     }
   }
 }

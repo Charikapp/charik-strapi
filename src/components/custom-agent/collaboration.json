@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_custom_agent_collaborations",
+  "info": {
+    "displayName": "collaboration"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

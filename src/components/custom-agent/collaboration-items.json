@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_custom_agent_collaboration_items",
+  "info": {
+    "displayName": "collaboration items"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

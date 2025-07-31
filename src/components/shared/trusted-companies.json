@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_trusted_companies",
+  "info": {
+    "displayName": "trusted companies"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "companies": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

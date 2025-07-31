@@ -43,6 +43,16 @@
       "component": "pricing.top",
       "repeatable": false
     },
+    "trusted_companies": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.trusted-companies",
+      "repeatable": false
+    },
     "swicth_offers": {
       "type": "component",
       "pluginOptions": {

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_custom_agent_what_s_a_custom_agents",
+  "info": {
+    "displayName": "What s a custom agent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "text_bottom": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

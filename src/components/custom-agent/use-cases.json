@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_custom_agent_use_cases",
+  "info": {
+    "displayName": "Use cases",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "ai_agents",
+  "collectionName": "custom_agents",
   "info": {
-    "singularName": "ai-agent",
-    "pluralName": "ai-agents",
-    "displayName": "AI Agent"
+    "singularName": "custom-agent",
+    "pluralName": "custom-agents",
+    "displayName": "Custom Agent"
   },
   "options": {
     "draftAndPublish": true
@@ -23,16 +23,6 @@
         }
       }
     },
-    "get_started": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "ai-agent.get-started",
-      "repeatable": false
-    },
     "top": {
       "type": "component",
       "pluginOptions": {
@@ -40,7 +30,7 @@
           "localized": true
         }
       },
-      "component": "ai-agent.top",
+      "component": "custom-agent.top",
       "repeatable": false
     },
     "trusted_companies": {
@@ -53,24 +43,24 @@
       "component": "shared.trusted-companies",
       "repeatable": false
     },
-    "what_ai_agent": {
+    "whats_a_custom_agent": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "ai-agent.what-ai-agent",
+      "component": "custom-agent.what-s-a-custom-agent",
       "repeatable": false
     },
-    "what_ai_agent_swiper": {
+    "whats_a_custom_agent_items": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "ai-agent.what-ai-agent-swiper",
+      "component": "custom-agent.what-s-a-custom-agent-items",
       "repeatable": true
     },
     "how_it_works": {
@@ -80,38 +70,58 @@
           "localized": true
         }
       },
-      "component": "ai-agent.how-it-works",
-      "repeatable": false
-    },
-    "swiper_how_it_works": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "ai-agent.swiper-how-it-works",
+      "component": "custom-agent.how-it-works",
       "repeatable": true
     },
-    "why_use_AI_agents": {
+    "trusted_collaboration": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "ai-agent.why-use-ai-agents",
+      "component": "custom-agent.collaboration",
       "repeatable": false
     },
-    "why_use_ai_agents_swiper": {
+    "trusted_collaboration_items": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "ai-agent.swiper",
+      "component": "custom-agent.collaboration-items",
       "repeatable": true
+    },
+    "use_cases": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom-agent.use-cases",
+      "repeatable": false
+    },
+    "use_cases_items": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom-agent.use-cases-items",
+      "repeatable": true
+    },
+    "get_started": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom-agent.get-started",
+      "repeatable": false
     }
   }
 }

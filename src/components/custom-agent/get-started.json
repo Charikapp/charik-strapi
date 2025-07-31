@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_custom_agent_get_starteds",
+  "info": {
+    "displayName": "Get started"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primary_button": {
+      "type": "string"
+    },
+    "primary_button_link": {
+      "type": "string"
+    },
+    "secondary_button": {
+      "type": "string"
+    },
+    "secondary_button_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

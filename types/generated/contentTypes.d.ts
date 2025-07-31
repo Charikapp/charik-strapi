@@ -431,6 +431,15 @@ export interface ApiAiAgentAiAgent extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    trusted_companies: Schema.Attribute.Component<
+      'shared.trusted-companies',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -785,6 +794,124 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCustomAgentCustomAgent extends Struct.SingleTypeSchema {
+  collectionName: 'custom_agents';
+  info: {
+    displayName: 'Custom Agent';
+    pluralName: 'custom-agents';
+    singularName: 'custom-agent';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    get_started: Schema.Attribute.Component<'custom-agent.get-started', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    how_it_works: Schema.Attribute.Component<
+      'custom-agent.how-it-works',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::custom-agent.custom-agent'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    top: Schema.Attribute.Component<'custom-agent.top', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trusted_collaboration: Schema.Attribute.Component<
+      'custom-agent.collaboration',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trusted_collaboration_items: Schema.Attribute.Component<
+      'custom-agent.collaboration-items',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trusted_companies: Schema.Attribute.Component<
+      'shared.trusted-companies',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    use_cases: Schema.Attribute.Component<'custom-agent.use-cases', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    use_cases_items: Schema.Attribute.Component<
+      'custom-agent.use-cases-items',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    whats_a_custom_agent: Schema.Attribute.Component<
+      'custom-agent.what-s-a-custom-agent',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    whats_a_custom_agent_items: Schema.Attribute.Component<
+      'custom-agent.what-s-a-custom-agent-items',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
 export interface ApiEmailFinderEmailFinder extends Struct.SingleTypeSchema {
   collectionName: 'email_finders';
   info: {
@@ -832,6 +959,15 @@ export interface ApiEmailFinderEmailFinder extends Struct.SingleTypeSchema {
         };
       }>;
     top: Schema.Attribute.Component<'email-finder.top', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trusted_companies: Schema.Attribute.Component<
+      'shared.trusted-companies',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1036,6 +1172,15 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    trusted_companies: Schema.Attribute.Component<
+      'shared.trusted-companies',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1214,6 +1359,15 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
         };
       }>;
     top: Schema.Attribute.Component<'pricing.top', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trusted_companies: Schema.Attribute.Component<
+      'shared.trusted-companies',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1901,6 +2055,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::chrome-extension.chrome-extension': ApiChromeExtensionChromeExtension;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::custom-agent.custom-agent': ApiCustomAgentCustomAgent;
       'api::email-finder.email-finder': ApiEmailFinderEmailFinder;
       'api::faq.faq': ApiFaqFaq;
       'api::footer.footer': ApiFooterFooter;
