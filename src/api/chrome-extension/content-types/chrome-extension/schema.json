@@ -62,6 +62,16 @@
       },
       "component": "chrome-extension.tools",
       "repeatable": false
+    },
+    "tools_items": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "chrome-extension.tools-items",
+      "repeatable": true
     }
   }
 }

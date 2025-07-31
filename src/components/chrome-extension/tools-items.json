@@ -1,20 +1,17 @@
 {
-  "collectionName": "components_chrome_extension_grid_chrome_extensions",
+  "collectionName": "components_chrome_extension_tools_items",
   "info": {
-    "displayName": "grid_chrome_extension"
+    "displayName": "Tools items"
   },
   "options": {},
   "attributes": {
-    "feature": {
-      "type": "text"
-    },
-    "card_title": {
+    "title": {
       "type": "string"
     },
-    "card_description": {
+    "description": {
       "type": "text"
     },
-    "image": {
+    "icon": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

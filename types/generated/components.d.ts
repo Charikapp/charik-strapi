@@ -6,6 +6,7 @@ export interface AiAgentGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -160,8 +161,10 @@ export interface ChromeExtensionGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
+    button_link: Schema.Attribute.String;
     button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -173,18 +176,10 @@ export interface ChromeExtensionGridChromeExtension
     displayName: 'grid_chrome_extension';
   };
   attributes: {
-    card_1_description: Schema.Attribute.Text;
-    card_1_title: Schema.Attribute.String;
-    card_2_description: Schema.Attribute.Text;
-    card_2_title: Schema.Attribute.String;
-    card_3_description: Schema.Attribute.Text;
-    card_3_title: Schema.Attribute.String;
-    card_4_description: Schema.Attribute.Text;
-    card_4_title: Schema.Attribute.String;
-    feature1: Schema.Attribute.Text;
-    feature2: Schema.Attribute.Text;
-    feature3: Schema.Attribute.Text;
-    feature4: Schema.Attribute.Text;
+    card_description: Schema.Attribute.Text;
+    card_title: Schema.Attribute.String;
+    feature: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -195,14 +190,19 @@ export interface ChromeExtensionTools extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    item_1_description: Schema.Attribute.Text;
-    item_1_title: Schema.Attribute.String;
-    item_2_description: Schema.Attribute.Text;
-    item_2_title: Schema.Attribute.String;
-    item_3_description: Schema.Attribute.Text;
-    item_3_title: Schema.Attribute.String;
-    item_4_description: Schema.Attribute.Text;
-    item_4_title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ChromeExtensionToolsItems extends Struct.ComponentSchema {
+  collectionName: 'components_chrome_extension_tools_items';
+  info: {
+    displayName: 'Tools items';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -1146,6 +1146,7 @@ declare module '@strapi/strapi' {
       'chrome-extension.get-started': ChromeExtensionGetStarted;
       'chrome-extension.grid-chrome-extension': ChromeExtensionGridChromeExtension;
       'chrome-extension.tools': ChromeExtensionTools;
+      'chrome-extension.tools-items': ChromeExtensionToolsItems;
       'chrome-extension.top': ChromeExtensionTop;
       'contact-us.form-contact-us': ContactUsFormContactUs;
       'contact-us.get-started': ContactUsGetStarted;

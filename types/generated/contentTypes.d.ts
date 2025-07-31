@@ -697,6 +697,15 @@ export interface ApiChromeExtensionChromeExtension
           localized: true;
         };
       }>;
+    tools_items: Schema.Attribute.Component<
+      'chrome-extension.tools-items',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     top: Schema.Attribute.Component<'chrome-extension.top', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
