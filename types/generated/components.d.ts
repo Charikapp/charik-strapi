@@ -810,8 +810,10 @@ export interface PricingGetStarted extends Struct.ComponentSchema {
     displayName: 'get_started';
   };
   attributes: {
-    buttonText: Schema.Attribute.String;
+    button_link: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    tag: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }

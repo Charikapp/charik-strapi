@@ -5,13 +5,19 @@
   },
   "options": {},
   "attributes": {
+    "tag": {
+      "type": "string"
+    },
     "title": {
       "type": "text"
     },
     "description": {
       "type": "text"
     },
-    "buttonText": {
+    "button_text": {
+      "type": "string"
+    },
+    "button_link": {
       "type": "string"
     }
   },
