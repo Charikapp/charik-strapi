@@ -672,7 +672,7 @@ export interface ApiChromeExtensionChromeExtension
       }>;
     grid_chrome_extension: Schema.Attribute.Component<
       'chrome-extension.grid-chrome-extension',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

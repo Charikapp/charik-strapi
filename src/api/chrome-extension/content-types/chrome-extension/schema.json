@@ -51,7 +51,7 @@
         }
       },
       "component": "chrome-extension.grid-chrome-extension",
-      "repeatable": false
+      "repeatable": true
     },
     "tools": {
       "type": "component",
